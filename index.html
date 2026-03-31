@@ -36,8 +36,8 @@
 
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 glass border-b border-zinc-800/50">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <span class="text-xl font-extrabold tracking-tighter bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <span class="text-xl font-extrabold tracking-tighter bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent truncate pr-4">
                 FELIPE CARREIRO
             </span>
             
@@ -47,8 +47,10 @@
                 <a href="#projects" data-i18n="nav-projects" class="hover:text-white transition-colors">Projects</a>
                 <a href="#experience" data-i18n="nav-experience" class="hover:text-white transition-colors">Experience</a>
                 <a href="#contact" data-i18n="nav-contact" class="hover:text-white transition-colors text-violet-400">Contact</a>
-                
-                <div class="flex items-center space-x-3 ml-4 border-l border-zinc-800 pl-6">
+            </div>
+
+            <div class="flex items-center space-x-4 md:space-x-0">
+                <div class="flex items-center space-x-3 md:ml-4 md:border-l md:border-zinc-800 md:pl-6">
                     <button onclick="setLanguage('en')" id="btn-en" class="flag-btn active" title="English">
                         <svg class="w-6 h-4" viewBox="0 0 7410 3900"><rect width="7410" height="3900" fill="#b22234"/><path d="M0 300h7410M0 900h7410M0 1500h7410M0 2100h7410M0 2700h7410M0 3300h7410" stroke="#fff" stroke-width="300"/><rect width="2964" height="2100" fill="#3c3b6e"/><g fill="#fff"><g id="s"><g id="r"><path id="t" d="M247 90l70.534 217.082-184.66-134.164h228.253L176.466 307.082z"/><use href="#t" x="494"/><use href="#t" x="988"/><use href="#t" x="1482"/><use href="#t" x="1976"/></g><use href="#r" x="247" y="150"/></g><use href="#s" y="300"/><use href="#s" y="600"/><use href="#s" y="900"/><use href="#s" y="1200"/><use href="#s" y="1500"/><use href="#s" y="1800"/></g></svg>
                     </button>
@@ -56,13 +58,12 @@
                         <svg class="w-6 h-4" viewBox="0 0 720 504"><rect width="720" height="504" fill="#009b3a"/><path d="M360 44L44 252l316 208 316-208z" fill="#fedf00"/><circle cx="360" cy="252" r="126" fill="#002776"/><path d="M234 252a126 126 0 0 0 252 0" fill="#fff"/><path d="M234 252c0-10 40-20 126-20s126 10 126 20-40 20-126 20-126-10-126-20z" fill="#002776"/><path d="M240 240q120-20 240 0" fill="none" stroke="#fff" stroke-width="12"/></svg>
                     </button>
                 </div>
+                <button class="md:hidden text-zinc-400 ml-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
             </div>
-
-            <button class="md:hidden text-zinc-400" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewbox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
-            </button>
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-zinc-900 border-b border-zinc-800 p-6 space-y-4">
             <a href="#home" data-i18n="nav-home" class="block text-zinc-300">Home</a>
@@ -75,17 +76,17 @@
 
     <!-- Hero -->
     <header id="home" class="relative pt-32 pb-20 md:pt-48 md:pb-32 hero-gradient overflow-hidden">
-        <div class="max-w-6xl mx-auto px-6 text-center relative z-10">
-            <h1 class="text-5xl md:text-8xl font-extrabold mb-6 tracking-tight leading-none">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center relative z-10">
+            <h1 class="text-4xl sm:text-5xl md:text-8xl font-extrabold mb-6 tracking-tight leading-none">
                 <span data-i18n="hero-title-1">Lead Producer</span> & <br/>
                 <span class="text-violet-500" data-i18n="hero-title-2">Game Designer</span>
             </h1>
-            <p class="max-w-3xl mx-auto text-lg md:text-xl text-zinc-400 leading-relaxed mb-10" data-i18n="hero-desc">
+            <p class="max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-zinc-400 leading-relaxed mb-10 px-2" data-i18n="hero-desc">
                 Experienced in team leadership, project management, and cross-platform publishing. Focus on multidisciplinary production for PC, Consoles, and Mobile.
             </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#projects" class="px-8 py-4 bg-violet-600 hover:bg-violet-500 text-white rounded-xl font-bold transition-all shadow-lg shadow-violet-600/20" data-i18n="hero-btn-1">View Projects</a>
-                <a href="#experience" class="px-8 py-4 bg-zinc-900 hover:bg-zinc-800 text-zinc-100 rounded-xl font-bold transition-all border border-zinc-800" data-i18n="hero-btn-2">My Journey</a>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 px-4 sm:px-0">
+                <a href="#projects" class="w-full sm:w-auto px-8 py-4 bg-violet-600 hover:bg-violet-500 text-white rounded-xl font-bold transition-all shadow-lg shadow-violet-600/20" data-i18n="hero-btn-1">View Projects</a>
+                <a href="#experience" class="w-full sm:w-auto px-8 py-4 bg-zinc-900 hover:bg-zinc-800 text-zinc-100 rounded-xl font-bold transition-all border border-zinc-800" data-i18n="hero-btn-2">My Journey</a>
             </div>
         </div>
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-violet-500/5 blur-[120px] rounded-full pointer-events-none"></div>
@@ -93,87 +94,87 @@
 
     <!-- Stats -->
     <section class="border-y border-zinc-800/50 bg-zinc-900/20">
-        <div class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-12 grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">
             <div>
-                <div class="text-3xl font-bold text-white mb-1">10+ Years</div>
-                <div class="text-xs text-zinc-500 uppercase tracking-widest font-semibold" data-i18n="stat-1">Industry Experience</div>
+                <div class="text-xl min-[400px]:text-2xl md:text-3xl font-bold text-white mb-1" data-i18n="stat-1-val">10+ Years</div>
+                <div class="text-[10px] sm:text-xs text-zinc-500 uppercase tracking-widest font-semibold" data-i18n="stat-1">Industry Experience</div>
             </div>
             <div>
-                <div class="text-3xl font-bold text-white mb-1">5+ Years</div>
-                <div class="text-xs text-zinc-500 uppercase tracking-widest font-semibold" data-i18n="stat-2">Academic Teaching</div>
+                <div class="text-xl min-[400px]:text-2xl md:text-3xl font-bold text-white mb-1" data-i18n="stat-2-val">5+ Years</div>
+                <div class="text-[10px] sm:text-xs text-zinc-500 uppercase tracking-widest font-semibold" data-i18n="stat-2">Academic Teaching</div>
             </div>
             <div>
-                <div class="text-3xl font-bold text-white mb-1">15+</div>
-                <div class="text-xs text-zinc-500 uppercase tracking-widest font-semibold" data-i18n="stat-3">Projects Released</div>
+                <div class="text-xl min-[400px]:text-2xl md:text-3xl font-bold text-white mb-1">15+</div>
+                <div class="text-[10px] sm:text-xs text-zinc-500 uppercase tracking-widest font-semibold" data-i18n="stat-3">Projects Released</div>
             </div>
-            <div>
-                <div class="text-3xl font-bold text-white mb-1" data-i18n="stat-4-val">Multiplatform</div>
-                <div class="text-xs text-zinc-500 uppercase tracking-widest font-semibold" data-i18n="stat-4-label">Global Releases</div>
+            <div class="flex flex-col items-center justify-center">
+                <div class="text-lg min-[400px]:text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 break-words w-full leading-tight" data-i18n="stat-4-val">Multiplatform</div>
+                <div class="text-[10px] sm:text-xs text-zinc-500 uppercase tracking-widest font-semibold" data-i18n="stat-4-label">Global Releases</div>
             </div>
         </div>
     </section>
 
     <!-- Projects Carousel -->
-    <section id="projects" class="py-24 bg-zinc-950 overflow-hidden">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+    <section id="projects" class="py-20 sm:py-24 bg-zinc-950 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 gap-4">
                 <div>
-                    <h2 class="text-4xl font-bold mb-4" data-i18n="projects-title">Featured Projects</h2>
-                    <p class="text-zinc-400" data-i18n="projects-subtitle">Selection of projects in production, design, and strategic management.</p>
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-2 sm:mb-4" data-i18n="projects-title">Featured Projects</h2>
+                    <p class="text-sm sm:text-base text-zinc-400" data-i18n="projects-subtitle">Selection of projects in production, design, and strategic management.</p>
                 </div>
-                <div class="flex items-center space-x-4">
+                <div class="flex items-center space-x-4 self-end md:self-auto">
                     <button id="prevBtn" class="p-3 bg-zinc-900 hover:bg-violet-600 rounded-full transition-all border border-zinc-800 group">
-                        <svg class="w-6 h-6 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                     </button>
                     <button id="nextBtn" class="p-3 bg-zinc-900 hover:bg-violet-600 rounded-full transition-all border border-zinc-800 group">
-                        <svg class="w-6 h-6 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                     </button>
                 </div>
             </div>
 
-            <div id="carousel" class="flex space-x-6 overflow-x-auto no-scrollbar scroll-smooth">
+            <div id="carousel" class="flex space-x-4 sm:space-x-6 overflow-x-auto no-scrollbar scroll-smooth pb-4">
                 <!-- Minimol -->
-                <div onclick="openModal('minimol')" class="flex-none w-[320px] md:w-[450px] card-hover group bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden cursor-pointer">
+                <div onclick="openModal('minimol')" class="flex-none w-[85vw] max-w-[320px] md:max-w-none md:w-[450px] card-hover group bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden cursor-pointer">
                     <div class="aspect-video bg-zinc-800 overflow-hidden relative">
                         <img src="img1.jpg" alt="Minimol Games" onerror="this.src='https://via.placeholder.com/800x450?text=PC+and+Consoles+Minimol'" class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-500">
                         <div class="absolute inset-0 bg-violet-600/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
                             <span class="px-5 py-2 bg-white text-zinc-900 rounded-full font-bold text-xs uppercase tracking-widest" data-i18n="btn-details">Details</span>
                         </div>
                     </div>
-                    <div class="p-6">
+                    <div class="p-5 sm:p-6">
                         <div class="text-violet-400 text-[10px] font-bold uppercase mb-2" data-i18n="role-lead">Lead Producer & Designer</div>
-                        <h3 class="text-xl font-bold mb-2">PC & Console Releases</h3>
-                        <p class="text-zinc-500 text-sm line-clamp-2" data-i18n="project-desc-1">Leading production for major consoles with Xbox and Google partnerships.</p>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2" data-i18n="proj-title-1">PC & Console Releases</h3>
+                        <p class="text-zinc-500 text-xs sm:text-sm line-clamp-2" data-i18n="project-desc-1">Leading production for major consoles with Xbox and Google partnerships.</p>
                     </div>
                 </div>
 
                 <!-- Space Bits -->
-                <div onclick="openModal('spacebits')" class="flex-none w-[320px] md:w-[450px] card-hover group bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden cursor-pointer">
+                <div onclick="openModal('spacebits')" class="flex-none w-[85vw] max-w-[320px] md:max-w-none md:w-[450px] card-hover group bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden cursor-pointer">
                     <div class="aspect-video bg-zinc-800 overflow-hidden relative">
                         <img src="img2.jpg" alt="Space Bits" onerror="this.src='https://via.placeholder.com/800x450?text=Mobile+Live+Ops'" class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-500">
                         <div class="absolute inset-0 bg-violet-600/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
                             <span class="px-5 py-2 bg-white text-zinc-900 rounded-full font-bold text-xs uppercase tracking-widest" data-i18n="btn-details">Details</span>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <div class="text-violet-400 text-[10px] font-bold uppercase mb-2">Lead Producer</div>
-                        <h3 class="text-xl font-bold mb-2">Logic Pic Live Ops</h3>
-                        <p class="text-zinc-500 text-sm line-clamp-2" data-i18n="project-desc-2">Optimized art pipelines for global mobile updates.</p>
+                    <div class="p-5 sm:p-6">
+                        <div class="text-violet-400 text-[10px] font-bold uppercase mb-2" data-i18n="role-producer">Lead Producer</div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2" data-i18n="proj-title-2">Logic Pic Live Ops</h3>
+                        <p class="text-zinc-500 text-xs sm:text-sm line-clamp-2" data-i18n="project-desc-2">Optimized art pipelines for global mobile updates.</p>
                     </div>
                 </div>
 
                 <!-- Web3/NFT -->
-                <div onclick="openModal('web3')" class="flex-none w-[320px] md:w-[450px] card-hover group bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden cursor-pointer">
+                <div onclick="openModal('web3')" class="flex-none w-[85vw] max-w-[320px] md:max-w-none md:w-[450px] card-hover group bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden cursor-pointer">
                     <div class="aspect-video bg-zinc-800 overflow-hidden relative">
                         <img src="img3.jpg" alt="Web3" onerror="this.src='https://via.placeholder.com/800x450?text=Web3+Economy'" class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-500">
                         <div class="absolute inset-0 bg-violet-600/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
                             <span class="px-5 py-2 bg-white text-zinc-900 rounded-full font-bold text-xs uppercase tracking-widest" data-i18n="btn-details">Details</span>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <div class="text-violet-400 text-[10px] font-bold uppercase mb-2">Producer & Designer</div>
-                        <h3 class="text-xl font-bold mb-2">Blockchain Collections</h3>
-                        <p class="text-zinc-500 text-sm line-clamp-2" data-i18n="web3-desc">Large scale NFT and tokenomics production.</p>
+                    <div class="p-5 sm:p-6">
+                        <div class="text-violet-400 text-[10px] font-bold uppercase mb-2" data-i18n="role-prod-des">Producer & Designer</div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2" data-i18n="proj-title-3">Blockchain Collections</h3>
+                        <p class="text-zinc-500 text-xs sm:text-sm line-clamp-2" data-i18n="web3-desc">Large scale NFT and tokenomics production.</p>
                     </div>
                 </div>
             </div>
@@ -181,23 +182,23 @@
     </section>
 
     <!-- Experience Timeline -->
-    <section id="experience" class="py-24 max-w-4xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-16 flex items-center gap-4">
+    <section id="experience" class="py-20 sm:py-24 max-w-4xl mx-auto px-4 sm:px-6">
+        <h2 class="text-2xl sm:text-3xl font-bold mb-10 sm:mb-16 flex items-center gap-4">
             <span data-i18n="exp-title">Professional Path</span>
             <div class="h-px bg-zinc-800 flex-grow"></div>
         </h2>
         
-        <div class="space-y-16 relative">
+        <div class="space-y-12 sm:space-y-16 relative">
             <!-- Line for the timeline -->
-            <div class="absolute left-[5px] top-2 bottom-0 w-[1px] bg-zinc-800/50"></div>
+            <div class="absolute left-[3px] sm:left-[5px] top-2 bottom-0 w-[1px] bg-zinc-800/50"></div>
 
             <!-- Minimol -->
-            <div class="relative pl-10">
-                <div class="absolute left-0 top-1 w-[11px] h-[11px] bg-violet-500 rounded-full shadow-[0_0_12px_#7c3aed] z-10"></div>
+            <div class="relative pl-8 sm:pl-10">
+                <div class="absolute left-[-2px] sm:left-0 top-1 w-[11px] h-[11px] bg-violet-500 rounded-full shadow-[0_0_12px_#7c3aed] z-10"></div>
                 <div class="mb-2 text-xs font-bold text-violet-400 uppercase tracking-widest" data-i18n="exp-date-1">2024 — Present</div>
-                <h3 class="text-2xl font-bold mb-1" data-i18n="exp-job-1">Lead Game Producer / Lead Game Designer</h3>
+                <h3 class="text-xl sm:text-2xl font-bold mb-1" data-i18n="exp-job-1">Lead Game Producer / Lead Game Designer</h3>
                 <div class="text-zinc-300 font-semibold mb-4">Minimol Games</div>
-                <ul class="space-y-2 text-zinc-500 text-sm list-disc pl-4" data-i18n="exp-list-1">
+                <ul class="space-y-2 text-zinc-500 text-xs sm:text-sm list-disc pl-4" data-i18n="exp-list-1">
                     <li>Lead multidisciplinary team of 12 for PC/Consoles.</li>
                     <li>Manage partnerships with Xbox and Google (Indie Fund).</li>
                     <li>Optimize cross-platform delivery pipelines.</li>
@@ -205,77 +206,61 @@
             </div>
 
             <!-- Space Bits -->
-            <div class="relative pl-10">
-                <div class="absolute left-0 top-1 w-[11px] h-[11px] bg-zinc-700 rounded-full z-10"></div>
+            <div class="relative pl-8 sm:pl-10">
+                <div class="absolute left-[-2px] sm:left-0 top-1 w-[11px] h-[11px] bg-zinc-700 rounded-full z-10"></div>
                 <div class="mb-2 text-xs font-bold text-zinc-500 uppercase tracking-widest" data-i18n="exp-date-2">2023 — 2024</div>
-                <h3 class="text-2xl font-bold mb-1" data-i18n="exp-job-2">Lead Game Producer</h3>
+                <h3 class="text-xl sm:text-2xl font-bold mb-1" data-i18n="exp-job-2">Lead Game Producer</h3>
                 <div class="text-zinc-300 font-semibold mb-4">Space Bits</div>
-                <ul class="space-y-2 text-zinc-500 text-sm list-disc pl-4" data-i18n="exp-list-2">
+                <ul class="space-y-2 text-zinc-500 text-xs sm:text-sm list-disc pl-4" data-i18n="exp-list-2">
                     <li>Managed Live Ops for Logic Pic (Mobile).</li>
                     <li>Reduced art bottlenecks (30-day lead time ahead of schedule).</li>
                     <li>Primary liaison between outsourcing and publisher.</li>
                 </ul>
             </div>
 
-            <!-- Prota Games -->
-            <div class="relative pl-10">
-                <div class="absolute left-0 top-1 w-[11px] h-[11px] bg-zinc-700 rounded-full z-10"></div>
-                <div class="mb-2 text-xs font-bold text-zinc-500 uppercase tracking-widest" data-i18n="exp-date-3">2022 — 2023</div>
-                <h3 class="text-2xl font-bold mb-1" data-i18n="exp-job-3">Lead Game Designer / Producer</h3>
-                <div class="text-zinc-300 font-semibold mb-4">Prota Games</div>
-                <ul class="space-y-2 text-zinc-500 text-sm list-disc pl-4" data-i18n="exp-list-3">
-                    <li>Led GD team for multi-million dollar NFT projects ($800k revenue).</li>
-                    <li>Strategy and planning for launched titles.</li>
-                    <li>Metric optimization (Retention & LTV).</li>
-                </ul>
-            </div>
-
             <!-- Infnet -->
-            <div class="relative pl-10">
-                <div class="absolute left-0 top-1 w-[11px] h-[11px] bg-zinc-700 rounded-full z-10"></div>
+            <div class="relative pl-8 sm:pl-10">
+                <div class="absolute left-[-2px] sm:left-0 top-1 w-[11px] h-[11px] bg-zinc-700 rounded-full z-10"></div>
                 <div class="mb-2 text-xs font-bold text-zinc-500 uppercase tracking-widest" data-i18n="exp-date-infnet">2021 — Present</div>
-                <h3 class="text-xl font-bold mb-1" data-i18n="exp-job-infnet">Game Design Professor</h3>
-                <div class="text-zinc-400 font-medium mb-2">Instituto Infnet</div>
-                <p class="text-zinc-500 text-sm" data-i18n="exp-desc-infnet">Teaching Design Thinking and Project Creation. Mentoring students for market insertion.</p>
+                <h3 class="text-xl sm:text-2xl font-bold mb-1" data-i18n="exp-job-infnet">Game Design Professor</h3>
+                <div class="text-zinc-300 font-semibold mb-4">Instituto Infnet</div>
+                <p class="text-zinc-500 text-xs sm:text-sm leading-relaxed" data-i18n="exp-desc-infnet">Teaching Design Thinking and Project Creation. Mentoring students for market insertion.</p>
             </div>
 
-            <!-- Early Career Grouped -->
-            <div class="relative pl-10">
-                <div class="absolute left-0 top-1 w-[11px] h-[11px] bg-zinc-800 rounded-full z-10"></div>
-                <div class="mb-2 text-xs font-bold text-zinc-600 uppercase tracking-widest">2016 — 2022</div>
-                <h3 class="text-lg font-bold mb-1" data-i18n="exp-early-title">Foundation & Innovation Hubs</h3>
-                <div class="text-zinc-500 text-xs italic mb-4">Little Giants, Hot Cafe, Prin Game Studio, Dorfer Games</div>
-                <p class="text-zinc-600 text-sm leading-relaxed" data-i18n="exp-early-desc">
-                    Multiple roles as Producer and Designer across Indie, Advergaming, and Blockchain projects. 
-                    Highlight: BIG Festival "Best Brand Game" Award and Rock in Rio (Game XP) exhibitions.
+            <!-- Condensed Older Experiences -->
+            <div class="relative pl-8 sm:pl-10">
+                <div class="absolute left-[-2px] sm:left-0 top-1 w-[11px] h-[11px] bg-zinc-800 rounded-full z-10"></div>
+                <div class="mb-2 text-xs font-bold text-zinc-600 uppercase tracking-widest" data-i18n="exp-date-old">2016 — 2023</div>
+                <h3 class="text-lg sm:text-xl font-bold mb-1" data-i18n="exp-old-title">Previous Roles</h3>
+                <div class="text-zinc-500 text-[10px] sm:text-xs italic mb-4" data-i18n="exp-old-studios">Prota Games, Little Giants, Hot Cafe & more</div>
+                <p class="text-zinc-600 text-xs sm:text-sm leading-relaxed" data-i18n="exp-old-desc">
+                    Lead Game Designer/Producer for high-revenue NFT projects at Prota Games. Built a strong foundation across Indie, Advergaming, and Blockchain studios since 2016, earning the BIG Festival 'Best Brand Game' award.
                 </p>
             </div>
         </div>
     </section>
 
     <!-- Modal Project Details -->
-    <div id="project-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center px-6">
+    <div id="project-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center px-4 sm:px-6">
         <div class="absolute inset-0 bg-zinc-950/95 backdrop-blur-md" onclick="closeModal()"></div>
-        <div id="modal-content" class="relative bg-zinc-900 w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl border border-zinc-800 shadow-2xl scale-95 opacity-0">
-            <button onclick="closeModal()" class="absolute top-6 right-6 p-2 bg-zinc-800 rounded-full hover:bg-zinc-700 transition z-20">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        <div id="modal-content" class="relative bg-zinc-900 w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl border border-zinc-800 shadow-2xl scale-95 opacity-0 flex flex-col md:grid md:grid-cols-2">
+            <button onclick="closeModal()" class="absolute top-4 right-4 sm:top-6 sm:right-6 p-2 bg-zinc-800/80 backdrop-blur rounded-full hover:bg-zinc-700 transition z-20">
+                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
-            <div class="grid md:grid-cols-2">
-                <div class="h-64 md:h-full bg-zinc-800 min-h-[400px]">
-                    <img id="modal-img" src="" alt="" class="w-full h-full object-cover">
-                </div>
-                <div class="p-8 md:p-12">
-                    <div id="modal-role" class="text-violet-400 text-xs font-bold uppercase tracking-widest mb-2">Role</div>
-                    <h2 id="modal-title" class="text-3xl font-bold mb-6">Project Title</h2>
-                    <div class="space-y-6">
-                        <div>
-                            <h4 class="text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2" data-i18n="modal-overview">Overview</h4>
-                            <p id="modal-desc" class="text-zinc-300 leading-relaxed text-sm"></p>
-                        </div>
-                        <div>
-                            <h4 class="text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2" data-i18n="modal-results">Main Results</h4>
-                            <ul id="modal-results-list" class="space-y-2 text-zinc-400 text-sm list-disc pl-4"></ul>
-                        </div>
+            <div class="h-48 sm:h-64 md:h-full bg-zinc-800 min-h-[192px] sm:min-h-[256px] md:min-h-[400px] shrink-0">
+                <img id="modal-img" src="" alt="" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 sm:p-8 md:p-12">
+                <div id="modal-role" class="text-violet-400 text-[10px] font-bold uppercase tracking-widest mb-2" data-i18n="modal-role">Role</div>
+                <h2 id="modal-title" class="text-2xl sm:text-3xl font-bold mb-6">Project Title</h2>
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-[10px] sm:text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2" data-i18n="modal-overview">Overview</h4>
+                        <p id="modal-desc" class="text-zinc-300 leading-relaxed text-xs sm:text-sm"></p>
+                    </div>
+                    <div>
+                        <h4 class="text-[10px] sm:text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2" data-i18n="modal-results">Main Results</h4>
+                        <ul id="modal-results-list" class="space-y-2 text-zinc-400 text-xs sm:text-sm list-disc pl-4"></ul>
                     </div>
                 </div>
             </div>
@@ -283,23 +268,23 @@
     </div>
 
     <!-- Contact -->
-    <section id="contact" class="py-24 bg-zinc-900/10 border-t border-zinc-800/50 text-center relative overflow-hidden">
-        <h2 class="text-4xl font-extrabold mb-10 tracking-tight relative z-10" data-i18n="contact-title">Let's build the future of gaming.</h2>
-        <div class="flex flex-col md:flex-row justify-center gap-6 max-w-2xl mx-auto px-6 relative z-10">
-            <a href="mailto:carreirofelipe@gmail.com" class="flex-1 p-6 bg-zinc-900 border border-zinc-800 rounded-2xl hover:border-violet-500 transition group">
+    <section id="contact" class="py-20 sm:py-24 bg-zinc-900/10 border-t border-zinc-800/50 text-center relative overflow-hidden">
+        <h2 class="text-3xl sm:text-4xl font-extrabold mb-8 sm:mb-10 tracking-tight relative z-10 px-4" data-i18n="contact-title">Let's build the future of gaming.</h2>
+        <div class="flex flex-col md:flex-row justify-center gap-4 sm:gap-6 max-w-2xl mx-auto px-4 sm:px-6 relative z-10">
+            <a href="mailto:carreirofelipe@gmail.com" class="flex-1 p-5 sm:p-6 bg-zinc-900 border border-zinc-800 rounded-2xl hover:border-violet-500 transition group">
                 <div class="font-bold group-hover:text-violet-400 transition">E-mail</div>
                 <div class="text-zinc-500 text-sm">carreirofelipe@gmail.com</div>
             </a>
-            <a href="https://www.linkedin.com/in/carreirofelipe/" target="_blank" class="flex-1 p-6 bg-zinc-900 border border-zinc-800 rounded-2xl hover:border-violet-500 transition group">
+            <a href="https://www.linkedin.com/in/carreirofelipe/" target="_blank" class="flex-1 p-5 sm:p-6 bg-zinc-900 border border-zinc-800 rounded-2xl hover:border-violet-500 transition group">
                 <div class="font-bold group-hover:text-violet-400 transition">LinkedIn</div>
                 <div class="text-zinc-500 text-sm">/in/carreirofelipe</div>
             </a>
         </div>
-    </footer>
+    </section>
 
     <!-- Footer -->
-    <footer class="py-12 bg-zinc-950 border-t border-zinc-900">
-        <div class="max-w-6xl mx-auto px-6 text-center text-zinc-600 text-[10px] uppercase tracking-[0.3em] font-bold">
+    <footer class="py-10 sm:py-12 bg-zinc-950 border-t border-zinc-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center text-zinc-600 text-[10px] uppercase tracking-[0.3em] font-bold">
             Felipe Carreiro &bull; <span id="current-year">2024</span>
         </div>
     </footer>
@@ -311,10 +296,14 @@
                 "hero-title-1": "Lead Producer", "hero-title-2": "Game Designer",
                 "hero-desc": "Experienced in team leadership, project management, and cross-platform publishing. Focus on multidisciplinary production for PC, Consoles, and Mobile.",
                 "hero-btn-1": "View Projects", "hero-btn-2": "My Journey",
-                "stat-1": "Industry Experience", "stat-2": "Academic Teaching", "stat-3": "Projects Released", 
+                "stat-1-val": "10+ Years", "stat-1": "Industry Experience", 
+                "stat-2-val": "5+ Years", "stat-2": "Academic Teaching", 
+                "stat-3": "Projects Released", 
                 "stat-4-val": "Multiplatform", "stat-4-label": "Global Releases",
                 "projects-title": "Featured Projects", "projects-subtitle": "Selection of projects in production, design, and strategic management.",
-                "btn-details": "Details", "role-lead": "Lead Producer & Designer",
+                "btn-details": "Details", 
+                "role-lead": "Lead Producer & Designer", "role-producer": "Lead Producer", "role-prod-des": "Producer & Designer",
+                "proj-title-1": "PC & Console Releases", "proj-title-2": "Logic Pic Live Ops", "proj-title-3": "Blockchain Collections",
                 "project-desc-1": "Leading production for major consoles with Xbox and Google partnerships.",
                 "project-desc-2": "Optimized art pipelines for global mobile updates.",
                 "web3-desc": "Large scale NFT and tokenomics production.",
@@ -323,24 +312,26 @@
                 "exp-list-1": "<li>Lead multidisciplinary team of 12 for PC/Consoles.</li><li>Manage partnerships with Xbox and Google (Indie Fund).</li><li>Optimize cross-platform delivery pipelines.</li>",
                 "exp-date-2": "2023 — 2024", "exp-job-2": "Lead Game Producer", 
                 "exp-list-2": "<li>Managed Live Ops for Logic Pic (Mobile).</li><li>Reduced art bottlenecks (30-day lead time ahead of schedule).</li><li>Primary liaison between outsourcing and publisher.</li>",
-                "exp-date-3": "2022 — 2023", "exp-job-3": "Lead Game Designer / Producer", 
-                "exp-list-3": "<li>Led GD team for multi-million dollar NFT projects ($800k revenue).</li><li>Strategy and planning for launched titles.</li><li>Metric optimization (Retention & LTV).</li>",
                 "exp-date-infnet": "2021 — Present", "exp-job-infnet": "Game Design Professor",
                 "exp-desc-infnet": "Teaching Design Thinking and Project Creation. Mentoring students for market insertion.",
-                "exp-early-title": "Foundation & Innovation Hubs",
-                "exp-early-desc": "Multiple roles as Producer and Designer across Indie, Advergaming, and Blockchain projects. Highlight: BIG Festival 'Best Brand Game' Award and Rock in Rio (Game XP) exhibitions.",
+                "exp-date-old": "2016 — 2023", "exp-old-title": "Previous Roles", "exp-old-studios": "Prota Games, Little Giants, Hot Cafe & more",
+                "exp-old-desc": "Lead Game Designer/Producer for high-revenue NFT projects at Prota Games. Built a strong foundation across Indie, Advergaming, and Blockchain studios since 2016, earning the BIG Festival 'Best Brand Game' award.",
                 "contact-title": "Let's build the future of gaming.",
-                "modal-overview": "Overview", "modal-results": "Main Results"
+                "modal-overview": "Overview", "modal-results": "Main Results", "modal-role": "Role"
             },
             pt: {
                 "nav-home": "Início", "nav-about": "Sobre", "nav-projects": "Projetos", "nav-experience": "Carreira", "nav-contact": "Contato",
                 "hero-title-1": "Lead Producer", "hero-title-2": "Game Designer",
                 "hero-desc": "Experiência em liderança de equipe, gestão de projetos e publicação cross-platform. Foco em produção multidisciplinar para PC, Consoles e Mobile.",
                 "hero-btn-1": "Ver Projetos", "hero-btn-2": "Minha Trajetória",
-                "stat-1": "Experiência na Indústria", "stat-2": "Docência Acadêmica", "stat-3": "Projetos Lançados", 
+                "stat-1-val": "10+ Anos", "stat-1": "Experiência na Indústria", 
+                "stat-2-val": "5+ Anos", "stat-2": "Docência Acadêmica", 
+                "stat-3": "Projetos Lançados", 
                 "stat-4-val": "Multiplataforma", "stat-4-label": "Lançamentos Globais",
                 "projects-title": "Projetos em Destaque", "projects-subtitle": "Seleção de projetos em produção, design e gestão estratégica.",
-                "btn-details": "Detalhes", "role-lead": "Lead Producer & Designer",
+                "btn-details": "Detalhes", 
+                "role-lead": "Lead Producer & Designer", "role-producer": "Lead Producer", "role-prod-des": "Producer & Designer",
+                "proj-title-1": "Lançamentos PC & Console", "proj-title-2": "Live Ops Logic Pic", "proj-title-3": "Coleções Blockchain",
                 "project-desc-1": "Liderança de produção para consoles através de parcerias com Xbox e Google.",
                 "project-desc-2": "Otimização de pipelines de arte para atualizações globais mobile.",
                 "web3-desc": "Produção em larga escala de NFTs e tokenomics.",
@@ -349,14 +340,12 @@
                 "exp-list-1": "<li>Liderança de equipe multidisciplinar de 12 pessoas para PC/Consoles.</li><li>Gestão de parcerias com Xbox e Google (Indie Fund).</li><li>Otimização de pipelines de entrega multiplataforma.</li>",
                 "exp-date-2": "2023 — 2024", "exp-job-2": "Lead Game Producer",
                 "exp-list-2": "<li>Gestão de Live Ops para o Logic Pic (ByAliens).</li><li>Redução de gargalos na arte (entrega 30 dias adiantada).</li><li>Principal ponte entre o estúdio e a publisher.</li>",
-                "exp-date-3": "2022 — 2023", "exp-job-3": "Lead Game Designer / Producer",
-                "exp-list-3": "<li>Liderança da equipe de GD em projetos NFT ($800k de receita).</li><li>Estratégia e planejamento de títulos lançados.</li><li>Otimização de métricas (Retenção e LTV).</li>",
                 "exp-date-infnet": "2021 — Presente", "exp-job-infnet": "Professor de Game Design",
                 "exp-desc-infnet": "Lecionando Design Thinking e Criação de Projetos. Mentoria de alunos para inserção no mercado.",
-                "exp-early-title": "Fundação e Inovação",
-                "exp-early-desc": "Múltiplos papéis como Produtor e Designer em projetos Indie, Advergaming e Blockchain. Destaque: Prêmio 'Best Brand Game' no BIG Festival e exibições no Rock in Rio (Game XP).",
+                "exp-date-old": "2016 — 2023", "exp-old-title": "Experiências Anteriores", "exp-old-studios": "Prota Games, Little Giants, Hot Cafe & mais",
+                "exp-old-desc": "Lead Game Designer/Producer em projetos NFT de alta receita na Prota Games. Construiu uma base sólida em estúdios Indie, Advergaming e Blockchain desde 2016, conquistando o prêmio 'Best Brand Game' no BIG Festival.",
                 "contact-title": "Vamos construir o futuro dos games juntos.",
-                "modal-overview": "Visão Geral", "modal-results": "Principais Resultados"
+                "modal-overview": "Visão Geral", "modal-results": "Principais Resultados", "modal-role": "Papel"
             }
         };
 
