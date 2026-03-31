@@ -18,12 +18,15 @@
         .flag-btn:hover { opacity: 0.8; transform: scale(1); }
         .flag-btn.active { opacity: 1; filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.5)); transform: scale(1.1); }
         
+        /* Carousel Hide Scrollbar */
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         
+        /* Modal Animation */
         #project-modal { transition: opacity 0.3s ease-out; }
         #modal-content { transition: transform 0.3s ease-out; }
 
+        /* Custom Scrollbar for Modal */
         #modal-content::-webkit-scrollbar { width: 6px; }
         #modal-content::-webkit-scrollbar-track { background: #18181b; }
         #modal-content::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 10px; }
@@ -129,7 +132,7 @@
             </div>
 
             <div id="carousel" class="flex space-x-6 overflow-x-auto no-scrollbar scroll-smooth">
-                <!-- Project 1: Minimol -->
+                <!-- Minimol -->
                 <div onclick="openModal('minimol')" class="flex-none w-[320px] md:w-[450px] card-hover group bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden cursor-pointer">
                     <div class="aspect-video bg-zinc-800 overflow-hidden relative">
                         <img src="img1.jpg" alt="Minimol Games" onerror="this.src='https://via.placeholder.com/800x450?text=PC+and+Consoles+Minimol'" class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-500">
@@ -144,7 +147,7 @@
                     </div>
                 </div>
 
-                <!-- Project 2: Space Bits -->
+                <!-- Space Bits -->
                 <div onclick="openModal('spacebits')" class="flex-none w-[320px] md:w-[450px] card-hover group bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden cursor-pointer">
                     <div class="aspect-video bg-zinc-800 overflow-hidden relative">
                         <img src="img2.jpg" alt="Space Bits" onerror="this.src='https://via.placeholder.com/800x450?text=Mobile+Live+Ops'" class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-500">
@@ -159,7 +162,7 @@
                     </div>
                 </div>
 
-                <!-- Project 3: Web3/NFT -->
+                <!-- Web3/NFT -->
                 <div onclick="openModal('web3')" class="flex-none w-[320px] md:w-[450px] card-hover group bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden cursor-pointer">
                     <div class="aspect-video bg-zinc-800 overflow-hidden relative">
                         <img src="img3.jpg" alt="Web3" onerror="this.src='https://via.placeholder.com/800x450?text=Web3+Economy'" class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-500">
@@ -185,6 +188,7 @@
         </h2>
         
         <div class="space-y-16 relative">
+            <!-- Line for the timeline -->
             <div class="absolute left-[5px] top-2 bottom-0 w-[1px] bg-zinc-800/50"></div>
 
             <!-- Minimol -->
@@ -193,7 +197,11 @@
                 <div class="mb-2 text-xs font-bold text-violet-400 uppercase tracking-widest" data-i18n="exp-date-1">2024 — Present</div>
                 <h3 class="text-2xl font-bold mb-1" data-i18n="exp-job-1">Lead Game Producer / Lead Game Designer</h3>
                 <div class="text-zinc-300 font-semibold mb-4">Minimol Games</div>
-                <ul class="space-y-2 text-zinc-500 text-sm list-disc pl-4" data-i18n="exp-list-1"></ul>
+                <ul class="space-y-2 text-zinc-500 text-sm list-disc pl-4" data-i18n="exp-list-1">
+                    <li>Lead multidisciplinary team of 12 for PC/Consoles.</li>
+                    <li>Manage partnerships with Xbox and Google (Indie Fund).</li>
+                    <li>Optimize cross-platform delivery pipelines.</li>
+                </ul>
             </div>
 
             <!-- Space Bits -->
@@ -202,7 +210,11 @@
                 <div class="mb-2 text-xs font-bold text-zinc-500 uppercase tracking-widest" data-i18n="exp-date-2">2023 — 2024</div>
                 <h3 class="text-2xl font-bold mb-1" data-i18n="exp-job-2">Lead Game Producer</h3>
                 <div class="text-zinc-300 font-semibold mb-4">Space Bits</div>
-                <ul class="space-y-2 text-zinc-500 text-sm list-disc pl-4" data-i18n="exp-list-2"></ul>
+                <ul class="space-y-2 text-zinc-500 text-sm list-disc pl-4" data-i18n="exp-list-2">
+                    <li>Managed Live Ops for Logic Pic (Mobile).</li>
+                    <li>Reduced art bottlenecks (30-day lead time ahead of schedule).</li>
+                    <li>Primary liaison between outsourcing and publisher.</li>
+                </ul>
             </div>
 
             <!-- Prota Games -->
@@ -211,7 +223,11 @@
                 <div class="mb-2 text-xs font-bold text-zinc-500 uppercase tracking-widest" data-i18n="exp-date-3">2022 — 2023</div>
                 <h3 class="text-2xl font-bold mb-1" data-i18n="exp-job-3">Lead Game Designer / Producer</h3>
                 <div class="text-zinc-300 font-semibold mb-4">Prota Games</div>
-                <ul class="space-y-2 text-zinc-500 text-sm list-disc pl-4" data-i18n="exp-list-3"></ul>
+                <ul class="space-y-2 text-zinc-500 text-sm list-disc pl-4" data-i18n="exp-list-3">
+                    <li>Led GD team for multi-million dollar NFT projects ($800k revenue).</li>
+                    <li>Strategy and planning for launched titles.</li>
+                    <li>Metric optimization (Retention & LTV).</li>
+                </ul>
             </div>
 
             <!-- Infnet -->
@@ -219,26 +235,20 @@
                 <div class="absolute left-0 top-1 w-[11px] h-[11px] bg-zinc-700 rounded-full z-10"></div>
                 <div class="mb-2 text-xs font-bold text-zinc-500 uppercase tracking-widest" data-i18n="exp-date-infnet">2021 — Present</div>
                 <h3 class="text-xl font-bold mb-1" data-i18n="exp-job-infnet">Game Design Professor</h3>
-                <div class="text-zinc-400 font-medium mb-3">Instituto Infnet</div>
-                <p class="text-zinc-500 text-sm" data-i18n="exp-desc-infnet"></p>
+                <div class="text-zinc-400 font-medium mb-2">Instituto Infnet</div>
+                <p class="text-zinc-500 text-sm" data-i18n="exp-desc-infnet">Teaching Design Thinking and Project Creation. Mentoring students for market insertion.</p>
             </div>
 
-            <!-- Hot Cafe / Dorfer -->
+            <!-- Early Career Grouped -->
             <div class="relative pl-10">
                 <div class="absolute left-0 top-1 w-[11px] h-[11px] bg-zinc-800 rounded-full z-10"></div>
-                <div class="mb-2 text-xs font-bold text-zinc-600 uppercase tracking-widest">2020 — 2022</div>
-                <h3 class="text-xl font-bold mb-1">Web3 Producer & Economy Specialist</h3>
-                <div class="text-zinc-500 font-medium mb-3 italic">Hot Cafe | Dorfer Games</div>
-                <p class="text-zinc-600 text-sm leading-relaxed" data-i18n="exp-desc-web3"></p>
-            </div>
-
-            <!-- Early Labs -->
-            <div class="relative pl-10">
-                <div class="absolute left-0 top-1 w-[11px] h-[11px] bg-zinc-800/50 rounded-full z-10"></div>
-                <div class="mb-2 text-xs font-bold text-zinc-700 uppercase tracking-widest">2016 — 2020</div>
-                <h3 class="text-lg font-bold mb-1" data-i18n="exp-early-title">Foundation & Advergaming</h3>
-                <div class="text-zinc-600 text-xs italic mb-2">Little Giants | Prin | Bozil | Tinguá</div>
-                <p class="text-zinc-700 text-xs leading-relaxed" data-i18n="exp-early-desc"></p>
+                <div class="mb-2 text-xs font-bold text-zinc-600 uppercase tracking-widest">2016 — 2022</div>
+                <h3 class="text-lg font-bold mb-1" data-i18n="exp-early-title">Foundation & Innovation Hubs</h3>
+                <div class="text-zinc-500 text-xs italic mb-4">Little Giants, Hot Cafe, Prin Game Studio, Dorfer Games</div>
+                <p class="text-zinc-600 text-sm leading-relaxed" data-i18n="exp-early-desc">
+                    Multiple roles as Producer and Designer across Indie, Advergaming, and Blockchain projects. 
+                    Highlight: BIG Festival "Best Brand Game" Award and Rock in Rio (Game XP) exhibitions.
+                </p>
             </div>
         </div>
     </section>
@@ -285,11 +295,11 @@
                 <div class="text-zinc-500 text-sm">/in/carreirofelipe</div>
             </a>
         </div>
-    </section>
+    </footer>
 
     <!-- Footer -->
-    <footer class="py-12 bg-zinc-950 border-t border-zinc-900 text-center">
-        <div class="max-w-6xl mx-auto px-6 text-zinc-600 text-[10px] uppercase tracking-[0.3em] font-bold">
+    <footer class="py-12 bg-zinc-950 border-t border-zinc-900">
+        <div class="max-w-6xl mx-auto px-6 text-center text-zinc-600 text-[10px] uppercase tracking-[0.3em] font-bold">
             Felipe Carreiro &bull; <span id="current-year">2024</span>
         </div>
     </footer>
@@ -310,16 +320,15 @@
                 "web3-desc": "Large scale NFT and tokenomics production.",
                 "exp-title": "My Journey",
                 "exp-date-1": "2024 — Present", "exp-job-1": "Lead Game Producer / Lead Game Designer", 
-                "exp-list-1": "<li>Lead multidisciplinary team of 12 for PC and major consoles.</li><li>Management of art outsourcing teams for top industry partners (Fanatee, Afterverse).</li><li>Liaison for Xbox and Google strategic partnerships.</li><li>Management of porting service teams and quality control.</li><li>End-to-end prototyping and game development from scratch to launch.</li><li>Optimize cross-platform delivery pipelines.</li>",
+                "exp-list-1": "<li>Lead multidisciplinary team of 12 for PC/Consoles.</li><li>Manage partnerships with Xbox and Google (Indie Fund).</li><li>Optimize cross-platform delivery pipelines.</li>",
                 "exp-date-2": "2023 — 2024", "exp-job-2": "Lead Game Producer", 
-                "exp-list-2": "<li>Managed Live Ops for Logic Pic (Mobile published by ByAliens).</li><li>Eliminated production bottlenecks with 30-day lead time strategy.</li><li>Primary liaison between outsourcing studio and global publishers.</li>",
+                "exp-list-2": "<li>Managed Live Ops for Logic Pic (Mobile).</li><li>Reduced art bottlenecks (30-day lead time ahead of schedule).</li><li>Primary liaison between outsourcing and publisher.</li>",
                 "exp-date-3": "2022 — 2023", "exp-job-3": "Lead Game Designer / Producer", 
-                "exp-list-3": "<li>Led GD team for high-revenue NFT projects ($800k revenue).</li><li>Strategy, planning, and execution of launched titles.</li><li>Optimization of retention metrics and project LTV.</li>",
+                "exp-list-3": "<li>Led GD team for multi-million dollar NFT projects ($800k revenue).</li><li>Strategy and planning for launched titles.</li><li>Metric optimization (Retention & LTV).</li>",
                 "exp-date-infnet": "2021 — Present", "exp-job-infnet": "Game Design Professor",
-                "exp-desc-infnet": "Teaching Design Thinking, Game Design and Project Creation. Supervising student prototypes and mentoring for market entry.",
-                "exp-desc-web3": "Defined tokenomics and economic models for multiple projects. Managed primary market launches totaling over $10M and technical Unity implementation for multiple titles.",
-                "exp-early-title": "Foundation & Advergaming",
-                "exp-early-desc": "Multiple roles at Little Giants (Big Festival Best Brand Game Award), Hot Cafe, and Prin Game Studio. Exhibitions at Game XP / Rock in Rio and Startup RIO acceleration (2019/2020).",
+                "exp-desc-infnet": "Teaching Design Thinking and Project Creation. Mentoring students for market insertion.",
+                "exp-early-title": "Foundation & Innovation Hubs",
+                "exp-early-desc": "Multiple roles as Producer and Designer across Indie, Advergaming, and Blockchain projects. Highlight: BIG Festival 'Best Brand Game' Award and Rock in Rio (Game XP) exhibitions.",
                 "contact-title": "Let's build the future of gaming.",
                 "modal-overview": "Overview", "modal-results": "Main Results"
             },
@@ -337,16 +346,15 @@
                 "web3-desc": "Produção em larga escala de NFTs e tokenomics.",
                 "exp-title": "Minha Trajetória",
                 "exp-date-1": "2024 — Presente", "exp-job-1": "Lead Game Producer / Lead Game Designer",
-                "exp-list-1": "<li>Liderança de equipe multidisciplinar de 12 pessoas para PC e grandes consoles.</li><li>Gestão de equipe para outsourcing de arte para parceiros (Fanatee, Afterverse).</li><li>Ponto focal em parcerias estratégicas com Xbox e Google (Indie Fund).</li><li>Gerenciamento de equipes para serviços de portabilidade (porting) e controle de qualidade.</li><li>Construção e prototipação de jogos do zero ao lançamento (ciclo completo).</li><li>Otimização de pipelines de entrega multiplataforma.</li>",
+                "exp-list-1": "<li>Liderança de equipe multidisciplinar de 12 pessoas para PC/Consoles.</li><li>Gestão de parcerias com Xbox e Google (Indie Fund).</li><li>Otimização de pipelines de entrega multiplataforma.</li>",
                 "exp-date-2": "2023 — 2024", "exp-job-2": "Lead Game Producer",
-                "exp-list-2": "<li>Liderança de equipe para Live Ops do Logic Pic (Mobile publicado pela ByAliens).</li><li>Eliminação de gargalos com estratégia de entrega 30 dias antecipada.</li><li>Principal ponte entre o estúdio de outsourcing e publishers globais.</li>",
+                "exp-list-2": "<li>Gestão de Live Ops para o Logic Pic (ByAliens).</li><li>Redução de gargalos na arte (entrega 30 dias adiantada).</li><li>Principal ponte entre o estúdio e a publisher.</li>",
                 "exp-date-3": "2022 — 2023", "exp-job-3": "Lead Game Designer / Producer",
-                "exp-list-3": "<li>Liderança da equipe de GD em projetos NFT de alta receita ($800k).</li><li>Estratégia, planejamento e execução de títulos lançados.</li><li>Otimização de métricas de retenção e LTV do projeto.</li>",
+                "exp-list-3": "<li>Liderança da equipe de GD em projetos NFT ($800k de receita).</li><li>Estratégia e planejamento de títulos lançados.</li><li>Otimização de métricas (Retenção e LTV).</li>",
                 "exp-date-infnet": "2021 — Presente", "exp-job-infnet": "Professor de Game Design",
-                "exp-desc-infnet": "Lecionando Design Thinking, Game Design e Criação de Projetos. Supervisão de protótipos e mentoria de alunos para o mercado.",
-                "exp-desc-web3": "Definição de tokenomics e modelos econômicos. Gestão de lançamentos no mercado primário totalizando mais de $10M e implementação técnica em Unity.",
-                "exp-early-title": "Fundação e Advergaming",
-                "exp-early-desc": "Diversos papéis na Little Giants (Prêmio BIG Festival), Hot Cafe e Prin Game Studio. Exibições na Game XP / Rock in Rio e aceleração pelo Startup RIO (2019/2020).",
+                "exp-desc-infnet": "Lecionando Design Thinking e Criação de Projetos. Mentoria de alunos para inserção no mercado.",
+                "exp-early-title": "Fundação e Inovação",
+                "exp-early-desc": "Múltiplos papéis como Produtor e Designer em projetos Indie, Advergaming e Blockchain. Destaque: Prêmio 'Best Brand Game' no BIG Festival e exibições no Rock in Rio (Game XP).",
                 "contact-title": "Vamos construir o futuro dos games juntos.",
                 "modal-overview": "Visão Geral", "modal-results": "Principais Resultados"
             }
@@ -357,13 +365,10 @@
                 img: "img1.jpg",
                 role: "Lead Producer / Designer",
                 title: "PC & Console Releases",
-                desc: { 
-                    en: "At Minimol Games, I lead teams to prototype and build games from the ground up while managing high-stakes outsourcing and porting services for Xbox and Google.", 
-                    pt: "Na Minimol Games, lidero equipes na prototipação e construção de jogos do zero, gerenciando outsourcing de arte e serviços de porting para Xbox e Google." 
-                },
+                desc: { en: "Leading a multidisciplinary team of 12 people in the production and porting of games for PC and all major consoles.", pt: "Liderando uma equipe multidisciplinar de 12 pessoas na produção e portabilidade de jogos para PC e consoles." },
                 results: { 
-                    en: ["Art outsourcing management for major partners", "Porting service team leadership & QA", "Zero-to-launch original title development", "Xbox and Google Indie Fund strategic management"],
-                    pt: ["Gestão de outsourcing de arte para parceiros", "Liderança de equipe de porting e QA", "Desenvolvimento de títulos originais do zero", "Gestão estratégica com Xbox e Google Indie Fund"]
+                    en: ["Strategic partnerships with Xbox and Google", "Successful Google Indie Fund porting", "Simultaneous multiplatform launch optimization"],
+                    pt: ["Parcerias estratégicas com Xbox e Google", "Portabilidade para o Google Indie Fund", "Otimização de lançamentos multiplataforma"]
                 }
             },
             spacebits: {
@@ -372,8 +377,8 @@
                 title: "Logic Pic Live Ops",
                 desc: { en: "Managed the Live Ops for Logic Pic, acting as the primary liaison between outsourcing and the publisher.", pt: "Gestão de Live Ops para o título Logic Pic, atuando como ponte entre estúdio e publisher." },
                 results: {
-                    en: ["Reduced art bottleneck (30-day lead time)", "Ensured consistent delivery of live features", "Streamlined cross-department communication"],
-                    pt: ["Redução de gargalos na arte (antecedência de 30 dias)", "Entrega consistente de novas features de Live Ops", "Melhoria na eficiência de comunicação interna"]
+                    en: ["Reduced art bottleneck (transitioned to 30-day lead time)", "Ensured consistent delivery of live features", "Streamlined cross-department communication"],
+                    pt: ["Redução de gargalos na arte (entrega 30 dias adiantada)", "Entrega consistente de novas features de Live Ops", "Melhoria na eficiência de comunicação interna"]
                 }
             },
             web3: {
@@ -382,8 +387,8 @@
                 title: "Blockchain Ecosystems",
                 desc: { en: "Landed major NFT collections and play-to-earn projects at Prota Games and Hot Cafe.", pt: "Liderança de coleções NFT e projetos Play-to-Earn na Prota Games e Hot Cafe." },
                 results: {
-                    en: ["Over $10 Million primary market revenue", "More than 5,000 ETH trading volume", "Complex tokenomics design and technical implementation"],
-                    pt: ["Mais de $10 Milhões em receita no mercado primário", "Volume superior a 5.000 ETH", "Design de tokenomics e implementação técnica"]
+                    en: ["Over $10 Million primary market revenue", "More than 5,000 ETH trading volume", "Complex tokenomics design and Unity technical implementation"],
+                    pt: ["Mais de $10 Milhões em receita no mercado primário", "Volume de trade superior a 5.000 ETH", "Design de tokenomics complexos e implementação Unity"]
                 }
             }
         };
@@ -407,7 +412,6 @@
 
         function openModal(id) {
             const data = projectData[id];
-            if(!data) return;
             document.getElementById('modal-img').src = data.img;
             document.getElementById('modal-role').innerText = data.role;
             document.getElementById('modal-title').innerText = data.title;
