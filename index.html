@@ -82,11 +82,11 @@
                 <span class="text-violet-500" data-i18n="hero-title-2">Game Designer</span>
             </h1>
             <p class="max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-zinc-400 leading-relaxed mb-10 px-2" data-i18n="hero-desc">
-                Experienced in team leadership, project management, and cross-platform publishing. Focus on multidisciplinary production for PC, Consoles, and Mobile.
+                Game producer and designer with 10+ years of experience leading teams and shipping projects across PC, consoles, and mobile. Focused on multidisciplinary production, from concept to launch, with a strong background in agile workflows, cross-platform publishing, and building scalable game experiences.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4 px-4 sm:px-0">
-                <a href="#projects" class="w-full sm:w-auto px-8 py-4 bg-violet-600 hover:bg-violet-500 text-white rounded-xl font-bold transition-all shadow-lg shadow-violet-600/20" data-i18n="hero-btn-1">View Projects</a>
-                <a href="#experience" class="w-full sm:w-auto px-8 py-4 bg-zinc-900 hover:bg-zinc-800 text-zinc-100 rounded-xl font-bold transition-all border border-zinc-800" data-i18n="hero-btn-2">My Journey</a>
+                <a href="#projects" class="w-full sm:w-auto px-8 py-4 bg-violet-600 hover:bg-violet-500 text-white rounded-xl font-bold transition-all shadow-lg shadow-violet-600/20" data-i18n="hero-btn-1">Projects</a>
+                <a href="#experience" class="w-full sm:w-auto px-8 py-4 bg-zinc-900 hover:bg-zinc-800 text-zinc-100 rounded-xl font-bold transition-all border border-zinc-800" data-i18n="hero-btn-2">Journey</a>
             </div>
         </div>
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-violet-500/5 blur-[120px] rounded-full pointer-events-none"></div>
@@ -108,8 +108,8 @@
                 <div class="text-[10px] sm:text-xs text-zinc-500 uppercase tracking-widest font-semibold" data-i18n="stat-3">Projects Released</div>
             </div>
             <div class="flex flex-col items-center justify-center">
-                <div class="text-lg min-[400px]:text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 break-words w-full leading-tight" data-i18n="stat-4-val">Multiplatform</div>
-                <div class="text-[10px] sm:text-xs text-zinc-500 uppercase tracking-widest font-semibold" data-i18n="stat-4-label">Global Releases</div>
+                <div class="text-lg min-[400px]:text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 break-words w-full leading-tight" data-i18n="stat-4-val">Global</div>
+                <div class="text-[10px] sm:text-xs text-zinc-500 uppercase tracking-widest font-semibold" data-i18n="stat-4-label">Cross-Platform</div>
             </div>
         </div>
     </section>
@@ -133,48 +133,129 @@
             </div>
 
             <div id="carousel" class="flex space-x-4 sm:space-x-6 overflow-x-auto no-scrollbar scroll-smooth pb-4">
-                <!-- Minimol -->
-                <div onclick="openModal('minimol')" class="flex-none w-[85vw] max-w-[320px] md:max-w-none md:w-[450px] card-hover group bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden cursor-pointer">
+                <!-- 1: Chessarama -->
+                <div onclick="openModal('chessarama')" class="flex-none w-[85vw] max-w-[320px] md:max-w-none md:w-[450px] card-hover group bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden cursor-pointer">
                     <div class="aspect-video bg-zinc-800 overflow-hidden relative">
-                        <img src="img1.jpg" alt="Minimol Games" onerror="this.src='https://via.placeholder.com/800x450?text=PC+and+Consoles+Minimol'" class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-500">
+                        <img src="chessrama/img0.avif" alt="Chessarama" onerror="this.src='https://via.placeholder.com/800x450?text=Chessarama'" class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-500">
                         <div class="absolute inset-0 bg-violet-600/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
                             <span class="px-5 py-2 bg-white text-zinc-900 rounded-full font-bold text-xs uppercase tracking-widest" data-i18n="btn-details">Details</span>
                         </div>
                     </div>
                     <div class="p-5 sm:p-6">
-                        <div class="text-violet-400 text-[10px] font-bold uppercase mb-2" data-i18n="role-lead">Lead Producer & Designer</div>
-                        <h3 class="text-lg sm:text-xl font-bold mb-2" data-i18n="proj-title-1">PC & Console Releases</h3>
-                        <p class="text-zinc-500 text-xs sm:text-sm line-clamp-2" data-i18n="project-desc-1">Leading production for major consoles with Xbox and Google partnerships.</p>
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="text-violet-400 text-[10px] font-bold uppercase" data-i18n="role-producer">Producer</div>
+                            <div class="text-zinc-600 text-[10px] font-bold tracking-widest">2024—2026</div>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2">Chessarama</h3>
+                        <p class="text-zinc-500 text-xs sm:text-sm line-clamp-2" data-i18n="proj-mini-1">Production and multiplatform porting for premium PC and console puzzle game.</p>
                     </div>
                 </div>
 
-                <!-- Space Bits -->
-                <div onclick="openModal('spacebits')" class="flex-none w-[85vw] max-w-[320px] md:max-w-none md:w-[450px] card-hover group bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden cursor-pointer">
+                <!-- 2: Case Solved -->
+                <div onclick="openModal('casesolved')" class="flex-none w-[85vw] max-w-[320px] md:max-w-none md:w-[450px] card-hover group bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden cursor-pointer">
                     <div class="aspect-video bg-zinc-800 overflow-hidden relative">
-                        <img src="img2.jpg" alt="Space Bits" onerror="this.src='https://via.placeholder.com/800x450?text=Mobile+Live+Ops'" class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-500">
+                        <img src="casesolved/img0.avif" alt="Case Solved" onerror="this.src='https://via.placeholder.com/800x450?text=Case+Solved'" class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-500">
                         <div class="absolute inset-0 bg-violet-600/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
                             <span class="px-5 py-2 bg-white text-zinc-900 rounded-full font-bold text-xs uppercase tracking-widest" data-i18n="btn-details">Details</span>
                         </div>
                     </div>
                     <div class="p-5 sm:p-6">
-                        <div class="text-violet-400 text-[10px] font-bold uppercase mb-2" data-i18n="role-producer">Lead Producer</div>
-                        <h3 class="text-lg sm:text-xl font-bold mb-2" data-i18n="proj-title-2">Logic Pic Live Ops</h3>
-                        <p class="text-zinc-500 text-xs sm:text-sm line-clamp-2" data-i18n="project-desc-2">Optimized art pipelines for global mobile updates.</p>
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="text-violet-400 text-[10px] font-bold uppercase" data-i18n="role-prod-des">Producer & Designer</div>
+                            <div class="text-zinc-600 text-[10px] font-bold tracking-widest">2026</div>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2">Case Solved</h3>
+                        <p class="text-zinc-500 text-xs sm:text-sm line-clamp-2" data-i18n="proj-mini-2">Full game design lifecycle management from prototype to complete mechanics.</p>
                     </div>
                 </div>
 
-                <!-- Web3/NFT -->
-                <div onclick="openModal('web3')" class="flex-none w-[85vw] max-w-[320px] md:max-w-none md:w-[450px] card-hover group bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden cursor-pointer">
+                <!-- 3: Catalog Games -->
+                <div onclick="openModal('catalog')" class="flex-none w-[85vw] max-w-[320px] md:max-w-none md:w-[450px] card-hover group bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden cursor-pointer">
                     <div class="aspect-video bg-zinc-800 overflow-hidden relative">
-                        <img src="img3.jpg" alt="Web3" onerror="this.src='https://via.placeholder.com/800x450?text=Web3+Economy'" class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-500">
+                        <img src="catalog/img0.avif" alt="Catalog Games" onerror="this.src='https://via.placeholder.com/800x450?text=Catalog+Games'" class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-500">
                         <div class="absolute inset-0 bg-violet-600/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
                             <span class="px-5 py-2 bg-white text-zinc-900 rounded-full font-bold text-xs uppercase tracking-widest" data-i18n="btn-details">Details</span>
                         </div>
                     </div>
                     <div class="p-5 sm:p-6">
-                        <div class="text-violet-400 text-[10px] font-bold uppercase mb-2" data-i18n="role-prod-des">Producer & Designer</div>
-                        <h3 class="text-lg sm:text-xl font-bold mb-2" data-i18n="proj-title-3">Blockchain Collections</h3>
-                        <p class="text-zinc-500 text-xs sm:text-sm line-clamp-2" data-i18n="web3-desc">Large scale NFT and tokenomics production.</p>
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="text-violet-400 text-[10px] font-bold uppercase" data-i18n="role-producer">Producer</div>
+                            <div class="text-zinc-600 text-[10px] font-bold tracking-widest">2024—2025</div>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2">Catalog Games</h3>
+                        <p class="text-zinc-500 text-xs sm:text-sm line-clamp-2" data-i18n="proj-mini-3">Project and team management for the porting and maintenance of various catalog games.</p>
+                    </div>
+                </div>
+
+                <!-- 4: Logic Pic -->
+                <div onclick="openModal('logicpic')" class="flex-none w-[85vw] max-w-[320px] md:max-w-none md:w-[450px] card-hover group bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden cursor-pointer">
+                    <div class="aspect-video bg-zinc-800 overflow-hidden relative">
+                        <img src="logicpic/img0.avif" alt="Logic Pic" onerror="this.src='https://via.placeholder.com/800x450?text=Logic+Pic'" class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-500">
+                        <div class="absolute inset-0 bg-violet-600/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-5 py-2 bg-white text-zinc-900 rounded-full font-bold text-xs uppercase tracking-widest" data-i18n="btn-details">Details</span>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="text-violet-400 text-[10px] font-bold uppercase" data-i18n="role-producer">Producer</div>
+                            <div class="text-zinc-600 text-[10px] font-bold tracking-widest">2024</div>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2">Logic Pic</h3>
+                        <p class="text-zinc-500 text-xs sm:text-sm line-clamp-2" data-i18n="proj-mini-4">Team management and Live Ops, acting as the primary liaison with the publisher.</p>
+                    </div>
+                </div>
+
+                <!-- 5: NFT Games -->
+                <div onclick="openModal('nftgames')" class="flex-none w-[85vw] max-w-[320px] md:max-w-none md:w-[450px] card-hover group bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden cursor-pointer">
+                    <div class="aspect-video bg-zinc-800 overflow-hidden relative">
+                        <img src="nftgames/img0.avif" alt="NFT Games" onerror="this.src='https://via.placeholder.com/800x450?text=NFT+Games'" class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-500">
+                        <div class="absolute inset-0 bg-violet-600/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-5 py-2 bg-white text-zinc-900 rounded-full font-bold text-xs uppercase tracking-widest" data-i18n="btn-details">Details</span>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="text-violet-400 text-[10px] font-bold uppercase" data-i18n="role-prod-des">Producer & Designer</div>
+                            <div class="text-zinc-600 text-[10px] font-bold tracking-widest">2020—2023</div>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2">NFT Games</h3>
+                        <p class="text-zinc-500 text-xs sm:text-sm line-clamp-2" data-i18n="proj-mini-5">Production and Game Design of high-impact Play-to-Earn games and NFT collections.</p>
+                    </div>
+                </div>
+
+                <!-- 6: Mobile Games -->
+                <div onclick="openModal('mobilegames')" class="flex-none w-[85vw] max-w-[320px] md:max-w-none md:w-[450px] card-hover group bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden cursor-pointer">
+                    <div class="aspect-video bg-zinc-800 overflow-hidden relative">
+                        <img src="mobilegames/img0.avif" alt="Mobile Games" onerror="this.src='https://via.placeholder.com/800x450?text=Mobile+Games'" class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-500">
+                        <div class="absolute inset-0 bg-violet-600/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-5 py-2 bg-white text-zinc-900 rounded-full font-bold text-xs uppercase tracking-widest" data-i18n="btn-details">Details</span>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="text-violet-400 text-[10px] font-bold uppercase" data-i18n="role-prod-des">Producer & Designer</div>
+                            <div class="text-zinc-600 text-[10px] font-bold tracking-widest">2016—2020</div>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2">Mobile Games</h3>
+                        <p class="text-zinc-500 text-xs sm:text-sm line-clamp-2" data-i18n="proj-mini-6">Game design and technical implementation for hyper-casual mobile titles.</p>
+                    </div>
+                </div>
+
+                <!-- 7: Outsourcing -->
+                <div onclick="openModal('outsourcing')" class="flex-none w-[85vw] max-w-[320px] md:max-w-none md:w-[450px] card-hover group bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden cursor-pointer">
+                    <div class="aspect-video bg-zinc-800 overflow-hidden relative">
+                        <img src="outsourcing/img0.avif" alt="Outsourcing" onerror="this.src='https://via.placeholder.com/800x450?text=Outsourcing'" class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-500">
+                        <div class="absolute inset-0 bg-violet-600/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-5 py-2 bg-white text-zinc-900 rounded-full font-bold text-xs uppercase tracking-widest" data-i18n="btn-details">Details</span>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="text-violet-400 text-[10px] font-bold uppercase" data-i18n="role-producer">Producer</div>
+                            <div class="text-zinc-600 text-[10px] font-bold tracking-widest">2024—2025</div>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2">Outsourcing</h3>
+                        <p class="text-zinc-500 text-xs sm:text-sm line-clamp-2" data-i18n="proj-mini-7">Management of outsourced art for Fanatee/Afterverse and Nintendo porting.</p>
                     </div>
                 </div>
             </div>
@@ -199,9 +280,11 @@
                 <h3 class="text-xl sm:text-2xl font-bold mb-1" data-i18n="exp-job-1">Lead Game Producer / Lead Game Designer</h3>
                 <div class="text-zinc-300 font-semibold mb-4">Minimol Games</div>
                 <ul class="space-y-2 text-zinc-500 text-xs sm:text-sm list-disc pl-4" data-i18n="exp-list-1">
-                    <li>Lead multidisciplinary team of 12 for PC/Consoles.</li>
-                    <li>Manage partnerships with Xbox and Google (Indie Fund).</li>
+                    <li>Leadership of multidisciplinary teams on in-house projects.</li>
+                    <li>Management of partnerships and deliverables with Xbox, Google (Indie Fund), and other strategic partners.</li>
                     <li>Optimize cross-platform delivery pipelines.</li>
+                    <li>Outsourcing Management for Art and Porting.</li>
+                    <li>Game Design and Prototyping throughout the product lifecycle.</li>
                 </ul>
             </div>
 
@@ -215,6 +298,7 @@
                     <li>Managed Live Ops for Logic Pic (Mobile).</li>
                     <li>Reduced art bottlenecks (30-day lead time ahead of schedule).</li>
                     <li>Primary liaison between outsourcing and publisher.</li>
+                    <li>Multidisciplinary Team Management.</li>
                 </ul>
             </div>
 
@@ -222,9 +306,9 @@
             <div class="relative pl-8 sm:pl-10">
                 <div class="absolute left-[-2px] sm:left-0 top-1 w-[11px] h-[11px] bg-zinc-700 rounded-full z-10"></div>
                 <div class="mb-2 text-xs font-bold text-zinc-500 uppercase tracking-widest" data-i18n="exp-date-infnet">2021 — Present</div>
-                <h3 class="text-xl sm:text-2xl font-bold mb-1" data-i18n="exp-job-infnet">Game Design Professor</h3>
+                <h3 class="text-xl sm:text-2xl font-bold mb-1" data-i18n="exp-job-infnet">Games Professor</h3>
                 <div class="text-zinc-300 font-semibold mb-4">Instituto Infnet</div>
-                <p class="text-zinc-500 text-xs sm:text-sm leading-relaxed" data-i18n="exp-desc-infnet">Teaching Design Thinking and Project Creation. Mentoring students for market insertion.</p>
+                <p class="text-zinc-500 text-xs sm:text-sm leading-relaxed" data-i18n="exp-desc-infnet">Teaching various subjects, specially focused on career, management, and creative project development. Also providing diverse mentoring for students aiming for market insertion.</p>
             </div>
 
             <!-- Condensed Older Experiences -->
@@ -234,7 +318,7 @@
                 <h3 class="text-lg sm:text-xl font-bold mb-1" data-i18n="exp-old-title">Previous Roles</h3>
                 <div class="text-zinc-500 text-[10px] sm:text-xs italic mb-4" data-i18n="exp-old-studios">Prota Games, Little Giants, Hot Cafe & more</div>
                 <p class="text-zinc-600 text-xs sm:text-sm leading-relaxed" data-i18n="exp-old-desc">
-                    Lead Game Designer/Producer for high-revenue NFT projects at Prota Games. Built a strong foundation across Indie, Advergaming, and Blockchain studios since 2016, earning the BIG Festival 'Best Brand Game' award.
+                    Lead Game Designer/Producer for high-revenue NFT projects at Prota Games and Hotcafe, highlighting a partnership with Vinicius Jr. Solid foundation founding own studios with Advergaming and Blockchain since 2016, winning the 'Best Brand Game' award at the BIG Festival in partnership with Authentic Games.
                 </p>
             </div>
         </div>
@@ -247,12 +331,15 @@
             <button onclick="closeModal()" class="absolute top-4 right-4 sm:top-6 sm:right-6 p-2 bg-zinc-800/80 backdrop-blur rounded-full hover:bg-zinc-700 transition z-20">
                 <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
-            <div class="h-48 sm:h-64 md:h-full bg-zinc-800 min-h-[192px] sm:min-h-[256px] md:min-h-[400px] shrink-0">
-                <img id="modal-img" src="" alt="" class="w-full h-full object-cover">
+            <div id="modal-gallery" class="bg-zinc-800/30 p-4 sm:p-6 flex flex-col gap-4 shrink-0 border-b md:border-b-0 md:border-r border-zinc-800/50">
+                <!-- Images will be injected here -->
             </div>
             <div class="p-6 sm:p-8 md:p-12">
-                <div id="modal-role" class="text-violet-400 text-[10px] font-bold uppercase tracking-widest mb-2" data-i18n="modal-role">Role</div>
-                <h2 id="modal-title" class="text-2xl sm:text-3xl font-bold mb-6">Project Title</h2>
+                <div class="flex items-center justify-between mb-2 pr-12 sm:pr-16">
+                    <div id="modal-role" class="text-violet-400 text-[10px] font-bold uppercase tracking-widest" data-i18n="modal-role">Role</div>
+                    <div id="modal-year" class="text-zinc-600 text-[10px] font-bold tracking-widest"></div>
+                </div>
+                <h2 id="modal-title" class="text-2xl sm:text-3xl font-bold mb-6 pr-12 sm:pr-16">Project Title</h2>
                 <div class="space-y-6">
                     <div>
                         <h4 class="text-[10px] sm:text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2" data-i18n="modal-overview">Overview</h4>
@@ -261,6 +348,12 @@
                     <div>
                         <h4 class="text-[10px] sm:text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2" data-i18n="modal-results">Main Results</h4>
                         <ul id="modal-results-list" class="space-y-2 text-zinc-400 text-xs sm:text-sm list-disc pl-4"></ul>
+                    </div>
+                    <div>
+                        <h4 class="text-[10px] sm:text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2" data-i18n="modal-comments">Comments</h4>
+                        <div class="border-l-2 border-violet-500 pl-4 py-1">
+                            <div id="modal-comments-text" class="text-zinc-400 text-xs sm:text-sm italic leading-relaxed"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -294,90 +387,312 @@
             en: {
                 "nav-home": "Home", "nav-about": "About", "nav-projects": "Projects", "nav-experience": "Experience", "nav-contact": "Contact",
                 "hero-title-1": "Lead Producer", "hero-title-2": "Game Designer",
-                "hero-desc": "Experienced in team leadership, project management, and cross-platform publishing. Focus on multidisciplinary production for PC, Consoles, and Mobile.",
-                "hero-btn-1": "View Projects", "hero-btn-2": "My Journey",
+                "hero-desc": "Game producer and designer with 10+ years of experience leading teams and shipping projects across PC, consoles, and mobile. Focused on multidisciplinary production, from concept to launch, with a strong background in agile workflows, cross-platform publishing, and building scalable game experiences.",
+                "hero-btn-1": "Projects", "hero-btn-2": "Journey",
                 "stat-1-val": "10+ Years", "stat-1": "Industry Experience", 
                 "stat-2-val": "5+ Years", "stat-2": "Academic Teaching", 
                 "stat-3": "Projects Released", 
-                "stat-4-val": "Multiplatform", "stat-4-label": "Global Releases",
+                "stat-4-val": "Global", "stat-4-label": "Cross-Platform",
                 "projects-title": "Featured Projects", "projects-subtitle": "Selection of projects in production, design, and strategic management.",
                 "btn-details": "Details", 
-                "role-lead": "Lead Producer & Designer", "role-producer": "Lead Producer", "role-prod-des": "Producer & Designer",
-                "proj-title-1": "PC & Console Releases", "proj-title-2": "Logic Pic Live Ops", "proj-title-3": "Blockchain Collections",
-                "project-desc-1": "Leading production for major consoles with Xbox and Google partnerships.",
-                "project-desc-2": "Optimized art pipelines for global mobile updates.",
-                "web3-desc": "Large scale NFT and tokenomics production.",
+                "role-lead": "Lead Producer & Designer", "role-producer": "Producer", "role-prod-des": "Producer & Designer",
+                "proj-mini-1": "Production and multiplatform porting for premium PC and console puzzle game.",
+                "proj-mini-2": "Full game design lifecycle management from prototype to complete mechanics.",
+                "proj-mini-3": "Project and team management for the porting and maintenance of various catalog games.",
+                "proj-mini-4": "Team management and Live Ops, acting as the primary liaison with the publisher.",
+                "proj-mini-5": "Production and Game Design of high-impact Play-to-Earn games and NFT collections.",
+                "proj-mini-6": "Mechanics design and Unity technical implementation for casual projects and strategic partners.",
+                "proj-mini-7": "Management of outsourced art for Fanatee/Afterverse and Nintendo porting.",
                 "exp-title": "My Journey",
                 "exp-date-1": "2024 — Present", "exp-job-1": "Lead Game Producer / Lead Game Designer", 
-                "exp-list-1": "<li>Lead multidisciplinary team of 12 for PC/Consoles.</li><li>Manage partnerships with Xbox and Google (Indie Fund).</li><li>Optimize cross-platform delivery pipelines.</li>",
+                "exp-list-1": "<li>Leadership of multidisciplinary teams on in-house projects.</li><li>Management of partnerships and deliverables with Xbox, Google (Indie Fund), and other strategic partners.</li><li>Optimize cross-platform delivery pipelines.</li><li>Outsourcing Management for Art and Porting.</li><li>Game Design and Prototyping throughout the product lifecycle.</li>",
                 "exp-date-2": "2023 — 2024", "exp-job-2": "Lead Game Producer", 
-                "exp-list-2": "<li>Managed Live Ops for Logic Pic (Mobile).</li><li>Reduced art bottlenecks (30-day lead time ahead of schedule).</li><li>Primary liaison between outsourcing and publisher.</li>",
-                "exp-date-infnet": "2021 — Present", "exp-job-infnet": "Game Design Professor",
-                "exp-desc-infnet": "Teaching Design Thinking and Project Creation. Mentoring students for market insertion.",
+                "exp-list-2": "<li>Managed Live Ops for Logic Pic (Mobile).</li><li>Reduced art bottlenecks (30-day lead time ahead of schedule).</li><li>Primary liaison between outsourcing and publisher.</li><li>Multidisciplinary Team Management.</li>",
+                "exp-date-infnet": "2021 — Present", "exp-job-infnet": "Games Professor",
+                "exp-desc-infnet": "Teaching various subjects, specially focused on career, management, and creative project development. Also providing diverse mentoring for students aiming for market insertion.",
                 "exp-date-old": "2016 — 2023", "exp-old-title": "Previous Roles", "exp-old-studios": "Prota Games, Little Giants, Hot Cafe & more",
-                "exp-old-desc": "Lead Game Designer/Producer for high-revenue NFT projects at Prota Games. Built a strong foundation across Indie, Advergaming, and Blockchain studios since 2016, earning the BIG Festival 'Best Brand Game' award.",
+                "exp-old-desc": "Game Designer/Producer for high-revenue NFT projects at Prota Games and Hotcafe, highlighting a partnership with Vinicius Jr. Built a solid foundation founding own studios with Advergaming and Blockchain since 2016, winning the 'Best Brand Game' award at the BIG Festival in partnership with Authentic Games.",
                 "contact-title": "Let's build the future of gaming.",
-                "modal-overview": "Overview", "modal-results": "Main Results", "modal-role": "Role"
+                "modal-overview": "Overview", "modal-results": "Main Results", "modal-role": "Role", "modal-comments": "Comments"
             },
             pt: {
                 "nav-home": "Início", "nav-about": "Sobre", "nav-projects": "Projetos", "nav-experience": "Carreira", "nav-contact": "Contato",
                 "hero-title-1": "Lead Producer", "hero-title-2": "Game Designer",
-                "hero-desc": "Experiência em liderança de equipe, gestão de projetos e publicação cross-platform. Foco em produção multidisciplinar para PC, Consoles e Mobile.",
-                "hero-btn-1": "Ver Projetos", "hero-btn-2": "Minha Trajetória",
+                "hero-desc": "Produtor e designer de jogos com mais de 10 anos de experiência a liderar equipas e a entregar projetos para PC, consolas e mobile. Focado na produção multidisciplinar, do conceito ao lançamento, com sólida experiência em metodologias ágeis, publicação multiplataforma e na criação de experiências de jogo escaláveis.",
+                "hero-btn-1": "Projetos", "hero-btn-2": "Trajetória",
                 "stat-1-val": "10+ Anos", "stat-1": "Experiência na Indústria", 
                 "stat-2-val": "5+ Anos", "stat-2": "Docência Acadêmica", 
                 "stat-3": "Projetos Lançados", 
-                "stat-4-val": "Multiplataforma", "stat-4-label": "Lançamentos Globais",
+                "stat-4-val": "Global", "stat-4-label": "Multiplataforma",
                 "projects-title": "Projetos em Destaque", "projects-subtitle": "Seleção de projetos em produção, design e gestão estratégica.",
                 "btn-details": "Detalhes", 
-                "role-lead": "Lead Producer & Designer", "role-producer": "Lead Producer", "role-prod-des": "Producer & Designer",
-                "proj-title-1": "Lançamentos PC & Console", "proj-title-2": "Live Ops Logic Pic", "proj-title-3": "Coleções Blockchain",
-                "project-desc-1": "Liderança de produção para consoles através de parcerias com Xbox e Google.",
-                "project-desc-2": "Otimização de pipelines de arte para atualizações globais mobile.",
-                "web3-desc": "Produção em larga escala de NFTs e tokenomics.",
+                "role-lead": "Lead Producer & Designer", "role-producer": "Producer", "role-prod-des": "Producer & Designer",
+                "proj-mini-1": "Produção e portabilidade multiplataforma para jogo premium de puzzle no PC e consoles.",
+                "proj-mini-2": "Gestão do ciclo completo de game design, do protótipo às mecânicas completas.",
+                "proj-mini-3": "Gerenciamento de projeto e equipe para porting e manutenção de jogos de catálogo.",
+                "proj-mini-4": "Gestão da equipe multidisciplinar e do Live Ops, atuando como elo com a publisher.",
+                "proj-mini-5": "Produção e Game Design de coleções NFT de alto impacto e jogos Play-to-Earn.",
+                "proj-mini-6": "Design de mecânicas e implementação técnica em Unity para projetos casuais e parceiros estratégicos.",
+                "proj-mini-7": "Gestão de arte terceirizada para Fanatee/Afterverse e porting para Nintendo.",
                 "exp-title": "Minha Trajetória",
                 "exp-date-1": "2024 — Presente", "exp-job-1": "Lead Game Producer / Lead Game Designer",
-                "exp-list-1": "<li>Liderança de equipe multidisciplinar de 12 pessoas para PC/Consoles.</li><li>Gestão de parcerias com Xbox e Google (Indie Fund).</li><li>Otimização de pipelines de entrega multiplataforma.</li>",
+                "exp-list-1": "<li>Liderança de equipe multidisciplinar em projetos in-house.</li><li>Gestão de parcerias e entregáveis com Xbox, Google (Indie Fund) e outros parceiros estratégicos.</li><li>Otimização de pipelines de entrega multiplataforma.</li><li>Gestão de Outsourcing para Arte e Porting.</li><li>Game Design e Prototipação de produtos por todo ciclo do projeto.</li>",
                 "exp-date-2": "2023 — 2024", "exp-job-2": "Lead Game Producer",
-                "exp-list-2": "<li>Gestão de Live Ops para o Logic Pic (ByAliens).</li><li>Redução de gargalos na arte (entrega 30 dias adiantada).</li><li>Principal ponte entre o estúdio e a publisher.</li>",
-                "exp-date-infnet": "2021 — Presente", "exp-job-infnet": "Professor de Game Design",
-                "exp-desc-infnet": "Lecionando Design Thinking e Criação de Projetos. Mentoria de alunos para inserção no mercado.",
+                "exp-list-2": "<li>Gestão de Live Ops para o Logic Pic (ByAliens).</li><li>Redução de gargalos na arte (entrega 30 dias adiantada).</li><li>Principal ponte entre o estúdio e a publisher.</li><li>Gestão de Equipe Multidisciplinar.</li>",
+                "exp-date-infnet": "2021 — Presente", "exp-job-infnet": "Professor de Games",
+                "exp-desc-infnet": "Lecionando diversas disciplinas, especialmente focado em carreira, gestão e desenvolvimento criativo de Projetos. Além de promover diversas mentorias para alunos pensando em inserção no mercado.",
                 "exp-date-old": "2016 — 2023", "exp-old-title": "Experiências Anteriores", "exp-old-studios": "Prota Games, Little Giants, Hot Cafe & mais",
-                "exp-old-desc": "Lead Game Designer/Producer em projetos NFT de alta receita na Prota Games. Construiu uma base sólida em estúdios Indie, Advergaming e Blockchain desde 2016, conquistando o prêmio 'Best Brand Game' no BIG Festival.",
+                "exp-old-desc": "Game Designer/Producer em projetos NFT de alta receita na Prota Games e Hotcafe, com destaque para parceria com Vinicius Jr. Construí uma base sólida empreendendo em estúdios próprios com Advergaming e Blockchain desde 2016, conquistando o prêmio 'Best Brand Game' no BIG Festival em parceria com Authentic Games.",
                 "contact-title": "Vamos construir o futuro dos games juntos.",
-                "modal-overview": "Visão Geral", "modal-results": "Principais Resultados", "modal-role": "Papel"
+                "modal-overview": "Visão Geral", "modal-results": "Principais Resultados", "modal-role": "Papel", "modal-comments": "Comentários"
             }
         };
 
+        const loremComment = {
+            en: [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            ],
+            pt: [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            ]
+        };
+
         const projectData = {
-            minimol: {
-                img: "img1.jpg",
-                role: "Lead Producer / Designer",
-                title: "PC & Console Releases",
-                desc: { en: "Leading a multidisciplinary team of 12 people in the production and porting of games for PC and all major consoles.", pt: "Liderando uma equipe multidisciplinar de 12 pessoas na produção e portabilidade de jogos para PC e consoles." },
+            chessarama: {
+                img: "chessrama/img0.avif",
+                gallery: ["chessrama/img1.avif", "chessrama/img2.avif", "chessrama/img3.avif"],
+                role: "Producer",
+                year: "2024—2026",
+                title: "Chessarama",
+                desc: { 
+                    en: "Management of the production, finalization, and porting of Chessarama for PC and major consoles, organizing tasks across a multidisciplinary team.", 
+                    pt: "Liderança na produção, finalização e portabilidade do Chessarama para PC e consoles principais, organizando as tarefas de uma equipe multidisciplinar." 
+                },
                 results: { 
-                    en: ["Strategic partnerships with Xbox and Google", "Successful Google Indie Fund porting", "Simultaneous multiplatform launch optimization"],
-                    pt: ["Parcerias estratégicas com Xbox e Google", "Portabilidade para o Google Indie Fund", "Otimização de lançamentos multiplataforma"]
+                    en: [
+                        "Management of strategic partnerships with Xbox, Google Indie Fund, SMG, and Chess.com", 
+                        "Project launched for PC, Xbox Series X|S, PS5, Nintendo Switch, and Mobile"
+                    ],
+                    pt: [
+                        "Gestão de parcerias estratégicas como Xbox, Google Indie Fund, SMG e Chess.com", 
+                        "Projeto lançado para PC, Xbox Series X|S, PS5, Nintendo Switch e Mobile"
+                    ]
+                },
+                comment: {
+                    en: [
+                        "I joined the project halfway through to help with organization. The game design was already resolved, and we knew what to build. Most of my work involved setting up and managing the roadmap to fit the team's reality and the partners' needs.",
+                        "We faced major optimization and porting challenges, especially on the Nintendo Switch, where we had to redo almost the entire UX for certain platforms.",
+                        "This experience consolidated a product-oriented approach, balancing technical feasibility, usability, and consistency in the final experience."
+                    ],
+                    pt: [
+                        "Entrei no meio do projeto para ajudar com a organização. O design já estava resolvido e sabíamos o que construir, de forma que a maior parte do meu trabalho foi montar e gerenciar o roadmap para adequar a realidade da equipe e as necessidades dos parceiros.",
+                        "Tivemos grandes desafios em otimização e adequação do porting, especialmente no Nintendo Switch, onde precisamos refazer quase toda a UX.",
+                        "Essa experiência consolidou uma atuação orientada a produto, equilibrando viabilidade técnica, usabilidade e consistência na experiência final."
+                    ]
                 }
             },
-            spacebits: {
-                img: "img2.jpg",
-                role: "Lead Producer",
-                title: "Logic Pic Live Ops",
-                desc: { en: "Managed the Live Ops for Logic Pic, acting as the primary liaison between outsourcing and the publisher.", pt: "Gestão de Live Ops para o título Logic Pic, atuando como ponte entre estúdio e publisher." },
+            casesolved: {
+                img: "casesolved/img0.avif",
+                gallery: ["casesolved/img1.avif", "casesolved/img2.avif", "casesolved/img3.avif"],
+                role: "Producer & Designer",
+                year: "2026",
+                title: "Case Solved",
+                desc: { 
+                    en: "Managed the full game design lifecycle, from initial prototyping to complete game mechanics, organizing workflows.", 
+                    pt: "Gerenciei todo o ciclo de vida do game design, desde a prototipagem inicial até às mecânicas completas do jogo." 
+                },
                 results: {
-                    en: ["Reduced art bottleneck (transitioned to 30-day lead time)", "Ensured consistent delivery of live features", "Streamlined cross-department communication"],
-                    pt: ["Redução de gargalos na arte (entrega 30 dias adiantada)", "Entrega consistente de novas features de Live Ops", "Melhoria na eficiência de comunicação interna"]
+                    en: [
+                        "Publisher funding and strategic partnership secured", 
+                        "Multiplatform release planning (Consoles and Mobile)",
+                        "End-to-end production and porting", 
+                        "Streamlined tasks across the development team"
+                    ],
+                    pt: [
+                        "Financiamento e parceria com publisher", 
+                        "Lançamento multiplataforma (Consoles e Mobile)",
+                        "Produção de ponta a ponta e portabilidade", 
+                        "Otimização de tarefas para toda a equipe de desenvolvimento"
+                    ]
+                },
+                comment: {
+                    en: [
+                        "I developed the idea from scratch, conducting market research and designing the mechanics and narrative. Initially, working with a very small team, I acted directly as the Game Designer.",
+                        "Later, we scaled the team for content production. I managed other designers in the creation of puzzles and oversaw the entire porting process for consoles and mobile.",
+                        "Currently, we have a published demo and a secured partnership with a publisher for the upcoming multiplatform release."
+                    ],
+                    pt: [
+                        "Atuei desenvolvendo a ideia desde o zero, com pesquisas de mercado e design de mecânicas e narrativa. Inicialmente, com uma equipe reduzida, fiz o papel de Game Designer.",
+                        "Posteriormente, aumentamos a equipe para a produção de conteúdo. Fiz a gestão de outros designers na produção dos puzzles e também o gerenciamento de todo o porting para consoles e mobile.",
+                        "Atualmente, estamos com a demo publicada e uma parceria firmada com uma publisher para o lançamento multiplataforma."
+                    ]
                 }
             },
-            web3: {
-                img: "img3.jpg",
-                role: "Producer / Game Designer",
-                title: "Blockchain Ecosystems",
-                desc: { en: "Landed major NFT collections and play-to-earn projects at Prota Games and Hot Cafe.", pt: "Liderança de coleções NFT e projetos Play-to-Earn na Prota Games e Hot Cafe." },
+            catalog: {
+                img: "catalog/img0.avif",
+                gallery: ["catalog/img1.avif", "catalog/img2.avif", "catalog/img3.avif"],
+                role: "Producer",
+                year: "2024—2025",
+                title: "Catalog Games",
+                desc: { 
+                    en: "Project and team management for the porting and maintenance of various smaller games from Minimol.", 
+                    pt: "Gerenciamento de projeto e equipe para porting e manutenção de diversos jogos menores da Minimol." 
+                },
                 results: {
-                    en: ["Over $10 Million primary market revenue", "More than 5,000 ETH trading volume", "Complex tokenomics design and Unity technical implementation"],
-                    pt: ["Mais de $10 Milhões em receita no mercado primário", "Volume de trade superior a 5.000 ETH", "Design de tokenomics complexos e implementação Unity"]
+                    en: [
+                        "Preparation and compliance of multiple projects for Steam and Epic Games Store",
+                        "Cross-platform delivery pipeline optimization",
+                        "Successfully led Google Indie Fund porting (Android)"
+                    ],
+                    pt: [
+                        "Preparação e adequação de múltiplos projetos para a Steam e Epic Games Store",
+                        "Otimização de pipeline de entrega multiplataforma",
+                        "Portabilidade concluída com sucesso para Google Indie Fund"
+                    ]
+                },
+                comment: {
+                    en: "Managed the team and schedule for the maintenance and porting of several smaller titles from Minimol's catalog. The main focus was structuring and preparing these games for major platforms, ensuring technical compliance and optimization, especially for releases on the Epic Games Store and Steam.",
+                    pt: "Atuei na gestão do time e do cronograma para a manutenção e porting de diversos títulos menores do catálogo da Minimol. O foco principal foi estruturar e preparar esses jogos para plataformas maiores, garantindo conformidade e otimização técnica especialmente para lançamentos na Epic Games Store e Steam."
+                }
+            },
+            logicpic: {
+                img: "logicpic/img0.avif",
+                gallery: ["logicpic/img1.avif", "logicpic/img2.avif", "logicpic/img3.avif"],
+                role: "Producer",
+                year: "2024",
+                title: "Logic Pic",
+                desc: { 
+                    en: "Managed the multidisciplinary team and Live Ops, acting as the primary liaison between studio and publisher.", 
+                    pt: "Gestão da equipe multidisciplinar e do Live Ops, atuando como elo principal entre estúdio e publisher." 
+                },
+                results: {
+                    en: [
+                        "Production acceleration and bottleneck elimination (30-day lead time)",
+                        "Communication management with publisher and localization team",
+                        "Ensured consistent delivery of live features"
+                    ],
+                    pt: [
+                        "Aceleração da produção e eliminação de gargalos (30 dias adiantado)",
+                        "Gestão de comunicação com publisher e equipe de localização",
+                        "Garantia de entrega consistente de novas features e conteúdos"
+                    ]
+                },
+                comment: {
+                    en: [
+                        "Took over team management with the challenge of accelerating a delayed production. I worked on organizing freelancers and internal artists, optimizing the workflow to deliver high-quality assets.",
+                        "In addition to acting as an intermediary for the localization team's demands, I led weekly alignment and progress reporting meetings with the publisher's team, ensuring project health and transparent communication."
+                    ],
+                    pt: [
+                        "Assumi a gestão da equipe com o desafio de acelerar uma produção que se encontrava atrasada. Atuei organizando os freelancers e os artistas internos, otimizando o fluxo de trabalho para entrega dos assets.",
+                        "Além de intermediar as demandas com a equipe de localização, conduzi reuniões semanais de alinhamento e reporte de progresso com a equipe da publisher, garantindo a saúde do projeto e uma comunicação transparente."
+                    ]
+                }
+            },
+            nftgames: {
+                img: "nftgames/img0.avif",
+                gallery: ["nftgames/img1.avif", "nftgames/img2.avif", "nftgames/img3.avif"],
+                role: "Producer & Designer",
+                year: "2020—2023",
+                title: "NFT Games",
+                desc: { 
+                    en: "Production and Game Design of high-impact NFT collections and Play-to-Earn games, defining tokenization and economic progression.", 
+                    pt: "Produção e Game Design de coleções NFT de alto impacto e jogos Play-to-Earn, definindo a tokenização e progressão econômica." 
+                },
+                results: {
+                    en: [
+                        "Lead Game Designer for a multi-million raising project (Heroes of Metaverse)",
+                        "Game production for Feudalz (a giant on the Ethereum network)",
+                        "Image rights agreement with Real Madrid for Vinicius Jr. collection"
+                    ],
+                    pt: [
+                        "Liderança de Game Design em projeto que arrecadou milhões (Heroes of Metaverse)",
+                        "Produção de jogo para Feudalz (gigante da rede Ethereum)",
+                        "Acordo de direitos de imagem com Real Madrid para coleção Vinicius Jr."
+                    ]
+                },
+                comment: {
+                    en: [
+                        "Worked directly on the creation of Vinicius Jr.'s NFT collection, participating in the negotiations and the agreement with the player's management and the Real Madrid team for the release of image rights.",
+                        "Also handled the game design and production of the game tied to the Feudalz collection, recognized as one of the largest on the Ethereum network at the time.",
+                        "Additionally, I was the Lead Game Designer for the Brazilian project Heroes of Metaverse, a major mobile game proposal that raised millions of dollars in sales and investments."
+                    ],
+                    pt: [
+                        "Atuei diretamente na criação da coleção de NFT do Vinicius Jr., participando das tratativas e do acordo com empresários do jogador e a equipe do Real Madrid para a liberação dos direitos de imagem.",
+                        "Fiz também o game design e produção do jogo atrelado à coleção Feudalz, reconhecida como uma das maiores da rede Ethereum na época.",
+                        "Além disso, fui líder da equipe de Game Design no projeto brasileiro Heroes of Metaverse, uma proposta de jogo grande mobile que arrecadou milhões de dólares em vendas e investimentos."
+                    ]
+                }
+            },
+            mobilegames: {
+                img: "mobilegames/img0.avif",
+                gallery: ["mobilegames/img1.avif", "mobilegames/img2.avif", "mobilegames/img3.avif"],
+                role: "Producer & Designer",
+                year: "2016—2020",
+                title: "Mobile Games",
+                desc: { 
+                    en: "Developed mechanics design and practical technical implementation in Unity for casual and hyper-casual projects, as well as for strategic partners.", 
+                    pt: "Desenvolvi o design de mecânicas e a implementação técnica prática na Unity para projetos casuais e hyper-casuais, assim como para parceiros estratégicos." 
+                },
+                results: {
+                    en: [
+                        "BIG Brands Award at the BIG Festival (Authentic Games Official)", 
+                        "Project listed among the top sellers on Google Play (Authentic)",
+                        "Released projects reaching millions of downloads (Prota/Dorfer)",
+                        "Investment acquisition through pitch decks and functional prototypes"
+                    ],
+                    pt: [
+                        "Prêmio de BIG Brands no BIG Festival (Authentic Games Oficial)", 
+                        "Projeto entre os mais vendidos da Google Play (Authentic)",
+                        "Projetos lançados atingindo milhões de downloads (Prota/Dorfer)",
+                        "Busca de investimento através de slide deck, pitch de ideias e protótipos"
+                    ]
+                },
+                comment: {
+                    en: [
+                        "My work in mobile was divided almost equally into two fronts, with a strong focus on both Game Design and Production.",
+                        "I managed large teams in the end-to-end production of games, from conception to launch. I also managed partnerships and actively sought investments in several cases.",
+                        "As a result, we secured publishing contracts and won funding programs for various games."
+                    ],
+                    pt: [
+                        "O meu trabalho em mobile foi dividido quase que igualmente em duas frentes, com uma boa parte lidando com Game Design e outra com Produção.",
+                        "Gerenciei grandes equipes na produção de ponta a ponta de jogos, desde a concepção até o lançamento, além de gerenciar parcerias e buscar ativamente investimento em diversos casos.",
+                        "Como resultado dessa estruturação, firmamos contratos com publishers e conquistamos editais para diversos jogos."
+                    ]
+                }
+            },
+            outsourcing: {
+                img: "outsourcing/img0.avif",
+                gallery: ["outsourcing/img1.avif", "outsourcing/img2.avif", "outsourcing/img3.avif"],
+                role: "Producer",
+                year: "2024—2025",
+                title: "Outsourcing",
+                desc: { 
+                    en: "Management of outsourced production and art for large-scale games from industry partners, along with Nintendo porting.", 
+                    pt: "Gestão de produção e arte terceirizada para jogos de grande escala de parceiros da indústria, além de porting para Nintendo." 
+                },
+                results: {
+                    en: [
+                        "Art management for CodyCross, Arena (Fanatee), and PK XD (Afterverse)",
+                        "Supervision of technical porting for Nintendo platforms",
+                        "Streamlined communication between studios and publishers"
+                    ],
+                    pt: [
+                        "Gestão de arte para CodyCross, Arena (Fanatee) e PK XD (Afterverse)",
+                        "Supervisão do porting técnico para plataformas Nintendo",
+                        "Comunicação simplificada entre estúdios e publishers"
+                    ]
+                },
+                comment: {
+                    en: [
+                        "Managed the production and the art team responsible for providing high-quality assets and content for massive mobile games, such as CodyCross and Arena (Fanatee), as well as PK XD (Afterverse).",
+                        "In parallel, I oversaw and managed the technical workflow for porting games to Nintendo."
+                    ],
+                    pt: [
+                        "Gerenciei a produção e a equipe de arte responsável por fornecer assets e conteúdo de alta qualidade para jogos de grande sucesso no mercado móvel, como CodyCross e Arena (Fanatee), além do PK XD (Afterverse).",
+                        "Em paralelo, atuei na gestão do fluxo de trabalho técnico do porting de jogos para a plataforma Nintendo."
+                    ]
                 }
             }
         };
@@ -401,11 +716,39 @@
 
         function openModal(id) {
             const data = projectData[id];
-            document.getElementById('modal-img').src = data.img;
+            
+            // Modal Text population
             document.getElementById('modal-role').innerText = data.role;
+            document.getElementById('modal-year').innerText = data.year;
             document.getElementById('modal-title').innerText = data.title;
             document.getElementById('modal-desc').innerText = data.desc[currentLang];
             
+            // Comments rendering (supports arrays for paragraphs)
+            const commentsContainer = document.getElementById('modal-comments-text');
+            commentsContainer.innerHTML = '';
+            const commentData = (typeof data.comment === 'object' && !Array.isArray(data.comment)) ? data.comment[currentLang] : data.comment;
+            const commentsArray = Array.isArray(commentData) ? commentData : [commentData];
+            
+            commentsArray.forEach(text => {
+                const p = document.createElement('p');
+                p.className = 'mb-3 last:mb-0';
+                p.innerText = text;
+                commentsContainer.appendChild(p);
+            });
+            
+            // Image Gallery Injection
+            const galleryContainer = document.getElementById('modal-gallery');
+            galleryContainer.innerHTML = '';
+            const images = data.gallery || [data.img];
+            images.forEach(src => {
+                const img = document.createElement('img');
+                img.src = src;
+                img.className = 'w-full aspect-video object-cover rounded-xl shadow-lg border border-zinc-700/50';
+                img.onerror = function() { this.src = 'https://via.placeholder.com/800x450?text=Preview'; };
+                galleryContainer.appendChild(img);
+            });
+            
+            // Results Injection
             const list = document.getElementById('modal-results-list');
             list.innerHTML = '';
             data.results[currentLang].forEach(item => {
