@@ -136,7 +136,7 @@
                 <!-- 1: Chessarama -->
                 <div onclick="openModal('chessarama')" class="flex-none w-[85vw] max-w-[320px] md:max-w-none md:w-[450px] card-hover group bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden cursor-pointer">
                     <div class="aspect-video bg-zinc-800 overflow-hidden relative">
-                        <img src="chessarama/img0.avif" alt="Chessarama" onerror="this.src='https://via.placeholder.com/800x450?text=Chessarama'" class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-500">
+                        <img src="chessarama/img0.gif" alt="Chessarama" onerror="this.src='https://via.placeholder.com/800x450?text=Chessarama'" class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-500">
                         <div class="absolute inset-0 bg-violet-600/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
                             <span class="px-5 py-2 bg-white text-zinc-900 rounded-full font-bold text-xs uppercase tracking-widest" data-i18n="btn-details">Details</span>
                         </div>
@@ -166,6 +166,24 @@
                         </div>
                         <h3 class="text-lg sm:text-xl font-bold mb-2">Case Solved</h3>
                         <p class="text-zinc-500 text-xs sm:text-sm line-clamp-2" data-i18n="proj-mini-2">Full game design lifecycle management from prototype to complete mechanics.</p>
+                    </div>
+                </div>
+
+                <!-- NEW: Other Games -->
+                <div onclick="openModal('othergames')" class="flex-none w-[85vw] max-w-[320px] md:max-w-none md:w-[450px] card-hover group bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden cursor-pointer">
+                    <div class="aspect-video bg-zinc-800 overflow-hidden relative">
+                        <img src="othergames/img0.avif" alt="Other Games" onerror="this.src='https://via.placeholder.com/800x450?text=Other+Games'" class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-500">
+                        <div class="absolute inset-0 bg-violet-600/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-5 py-2 bg-white text-zinc-900 rounded-full font-bold text-xs uppercase tracking-widest" data-i18n="btn-details">Details</span>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="text-violet-400 text-[10px] font-bold uppercase" data-i18n="role-prod-des">Producer & Designer</div>
+                            <div class="text-zinc-600 text-[10px] font-bold tracking-widest">2025—2026</div>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2">Other Games</h3>
+                        <p class="text-zinc-500 text-xs sm:text-sm line-clamp-2" data-i18n="proj-mini-other">Ideation, prototyping, and mechanics validation for multiple ongoing projects.</p>
                     </div>
                 </div>
 
@@ -237,7 +255,7 @@
                             <div class="text-zinc-600 text-[10px] font-bold tracking-widest">2016—2020</div>
                         </div>
                         <h3 class="text-lg sm:text-xl font-bold mb-2">Mobile Games</h3>
-                        <p class="text-zinc-500 text-xs sm:text-sm line-clamp-2" data-i18n="proj-mini-6">Game design and technical implementation for hyper-casual mobile titles.</p>
+                        <p class="text-zinc-500 text-xs sm:text-sm line-clamp-2" data-i18n="proj-mini-6">Mechanics design and Unity technical implementation for casual projects and strategic partners.</p>
                     </div>
                 </div>
 
@@ -398,6 +416,7 @@
                 "role-lead": "Lead Producer & Designer", "role-producer": "Producer", "role-prod-des": "Producer & Designer",
                 "proj-mini-1": "Production and multiplatform porting for premium PC and console puzzle game.",
                 "proj-mini-2": "Full game design lifecycle management from prototype to complete mechanics.",
+                "proj-mini-other": "Ideation, prototyping, and mechanics validation for multiple ongoing projects.",
                 "proj-mini-3": "Project and team management for the porting and maintenance of various catalog games.",
                 "proj-mini-4": "Team management and Live Ops, acting as the primary liaison with the publisher.",
                 "proj-mini-5": "Production and Game Design of high-impact Play-to-Earn games and NFT collections.",
@@ -429,6 +448,7 @@
                 "role-lead": "Lead Producer & Designer", "role-producer": "Producer", "role-prod-des": "Producer & Designer",
                 "proj-mini-1": "Produção e portabilidade multiplataforma para jogo premium de puzzle no PC e consoles.",
                 "proj-mini-2": "Gestão do ciclo completo de game design, do protótipo às mecânicas completas.",
+                "proj-mini-other": "Ideação, prototipação e validação de mecânicas para múltiplos projetos em andamento.",
                 "proj-mini-3": "Gerenciamento de projeto e equipe para porting e manutenção de jogos de catálogo.",
                 "proj-mini-4": "Gestão da equipe multidisciplinar e do Live Ops, atuando como elo com a publisher.",
                 "proj-mini-5": "Produção e Game Design de coleções NFT de alto impacto e jogos Play-to-Earn.",
@@ -448,20 +468,9 @@
             }
         };
 
-        const loremComment = {
-            en: [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-            ],
-            pt: [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-            ]
-        };
-
         const projectData = {
             chessarama: {
-                img: "chessarama/img0.avif",
+                img: "chessarama/img0.gif",
                 gallery: ["chessarama/img1.avif", "chessarama/img2.avif", "chessarama/img3.avif"],
                 role: "Producer",
                 year: "2024—2026",
@@ -530,6 +539,39 @@
                     ]
                 }
             },
+            othergames: {
+                img: "othergames/img0.avif",
+                gallery: ["othergames/img1.avif", "othergames/img2.avif", "othergames/img3.avif"],
+                role: "Producer & Designer",
+                year: "2025—2026",
+                title: "Other Games",
+                desc: { 
+                    en: "Ideation and prototyping of multiple ongoing games.", 
+                    pt: "Ideação e prototipação de múltiplos jogos em andamento." 
+                },
+                results: {
+                    en: [
+                        "Participation in development grants and funding programs", 
+                        "Acquisition of strategic partnerships and private funding"
+                    ],
+                    pt: [
+                        "Participação em editais de fomento e desenvolvimento", 
+                        "Captação de parcerias estratégicas e financiamento"
+                    ]
+                },
+                comment: {
+                    en: [
+                        "Several products were created for varying purposes, ranging from participating in funding programs to conducting playtests to validate core mechanics and ideas.",
+                        "While some prototypes fulfill their initial purpose and do not move forward, others gain traction after early testing and manage to secure private funding, publisher support, or government grants.",
+                        "Recent success cases include projects like Yakoana and Toyland Mayhem, which are currently funded by the RioFilmes grant for prototyping and full game development."
+                    ],
+                    pt: [
+                        "Diversos produtos foram criados com diferentes propósitos, desde a participação em editais de fomento até a criação de playtests para validação de mecânicas e ideias centrais.",
+                        "Enquanto alguns protótipos cumprem seu papel inicial e não avançam, outros ganham tração após os primeiros testes e conquistam financiamento privado, suporte de publishers ou aprovação em editais.",
+                        "Casos de sucesso recentes incluem projetos como Yakoana e Toyland Mayhem, atualmente financiados pelo edital da RioFilmes para as fases de prototipagem e desenvolvimento de jogo completo."
+                    ]
+                }
+            },
             catalog: {
                 img: "catalog/img0.avif",
                 gallery: ["catalog/img1.avif", "catalog/img2.avif", "catalog/img3.avif"],
@@ -592,7 +634,7 @@
             },
             nftgames: {
                 img: "nftgames/img0.avif",
-                gallery: ["nftgames/img1.gif", "nftgames/img2.avif", "nftgames/img3.avif"],
+                gallery: ["nftgames/img1.avif", "nftgames/img2.avif", "nftgames/img3.avif"],
                 role: "Producer & Designer",
                 year: "2020—2023",
                 title: "NFT Games",
