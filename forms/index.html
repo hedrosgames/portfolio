@@ -7,11 +7,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .card-img { height: 200px; width: 100%; object-fit: cover; }
-        /* Shifted to the left to show logo */
-        .card-img-left { object-position: left center; }
-        /* Uniform badges: height constrained, object-contain maintains aspect ratio */
+        /* Shifted further left to show logo */
+        .card-img-left { object-position: 10% center; }
         .badge-link { display: block; height: 48px; }
-        .badge-img { height: 100%; width: auto; object-fit: contain; }
+        /* Force white color for SVGs */
+        .badge-img { height: 100%; width: auto; object-fit: contain; filter: brightness(0) invert(1); }
     </style>
 </head>
 <body class="bg-zinc-950 text-zinc-100 min-h-screen p-8">
@@ -20,8 +20,9 @@
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Toyland -->
-            <div class="bg-zinc-900 rounded-lg overflow-hidden border border-zinc-800">
+            <div class="bg-zinc-900 rounded-lg overflow-hidden border border-zinc-800 relative">
                 <img src="img/Toyland.png" alt="Toyland" class="card-img bg-zinc-800">
+                <div class="absolute bottom-2 right-2 text-[10px] text-zinc-500 font-medium">Propriedade da Minimol Games</div>
                 <div class="p-6">
                     <h2 class="text-xl font-bold mb-4">Toyland</h2>
                     <a href="https://forms.clickup.com/30912035/f/xfbh3-44613/X8BI3UVDMIVPEE76C4" class="text-violet-400 hover:text-violet-300 font-semibold">Deixe seu Feedback</a>
@@ -29,8 +30,9 @@
             </div>
 
             <!-- Greek War -->
-            <div class="bg-zinc-900 rounded-lg overflow-hidden border border-zinc-800">
+            <div class="bg-zinc-900 rounded-lg overflow-hidden border border-zinc-800 relative">
                 <img src="img/Greek.png" alt="Greek War" class="card-img card-img-left bg-zinc-800">
+                <div class="absolute bottom-2 right-2 text-[10px] text-zinc-500 font-medium">Propriedade da Universal Lab</div>
                 <div class="p-6">
                     <h2 class="text-xl font-bold mb-4">Greek War</h2>
                     <a href="https://store.steampowered.com/app/3852760/Greek_War/" class="text-violet-400 hover:text-violet-300 font-semibold">Ver na Steam</a>
@@ -38,8 +40,9 @@
             </div>
 
             <!-- Case Solved -->
-            <div class="bg-zinc-900 rounded-lg overflow-hidden border border-zinc-800">
+            <div class="bg-zinc-900 rounded-lg overflow-hidden border border-zinc-800 relative">
                 <img src="img/Case.png" alt="Case Solved" class="card-img card-img-left bg-zinc-800">
+                <div class="absolute bottom-2 right-2 text-[10px] text-zinc-500 font-medium">Propriedade da Minimol Games</div>
                 <div class="p-6">
                     <h2 class="text-xl font-bold mb-4">Case Solved</h2>
                     <p class="text-zinc-400 mb-4">Experimente Gratuitamente</p>
