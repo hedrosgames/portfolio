@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Termo de Compromisso de Estágio - Hedros Game Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+    
+    @media print {
+      html, body {
+        background: white !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 210mm !important;
+        height: auto !important;
+      }
+      
+      .no-print {
+        display: none !important;
+      }
+
+      /* Reset wrapper containers to prevent top/bottom padding overflow */
+      header + div, main {
+        padding: 0 !important;
+        margin: 0 !important;
+        gap: 0 !important;
+        width: 210mm !important;
+        max-width: 210mm !important;
+        display: block !important;
+      }
+
+      .page-break {
+        page-break-after: always !important;
+        break-after: page !important;
+      }
+
+      .a4-page {
+        box-shadow: none !important;
+        margin: 0 !important;
+        width: 210mm !important;
+        height: 297mm !important;
+        max-height: 297mm !important;
+        padding: 14mm 20mm !important;
+        box-sizing: border-box !important;
+        position: relative !important;
+        overflow: hidden !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+      }
+    }
+
+    /* A4 Screen Simulation dimensions */
+    .a4-page {
+      width: 210mm;
+      height: 297mm;
+      padding: 16mm 20mm;
+      margin: 20px auto;
+      background: white;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+      font-family: 'Georgia', 'Times New Roman', serif;
+      line-height: 1.5;
+      color: #1a1a1a;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .editable-highlight {
+      border-bottom: 1px dashed #3b82f6;
+      background-color: rgba(239, 246, 255, 0.6);
+      padding: 0 4px;
+      transition: all 0.2s;
+    }
+    .editable-highlight:hover {
+      background-color: rgba(219, 234, 254, 0.9);
+    }
+  </style>
+</head>
+<body class="bg-slate-100 min-h-screen text-slate-800 font-sans antialiased">
+
+  <!-- TOP HEADER / CONTROLS (NO PRINT) -->
+  <header class="no-print bg-slate-900 text-white sticky top-0 z-50 shadow-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-4">
+      <div class="flex items-center gap-3">
+        <div class="bg-indigo-600 p-2 rounded-lg">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+        </div>
+        <div>
+          <h1 class="font-bold text-lg leading-tight">Termo de Compromisso de Estágio (TCE)</h1>
+          <p class="text-xs text-slate-400">Estágio Obrigatório Não Remunerado • Documento de 2 Páginas</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <button onclick="window.print()" class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-lg font-medium text-sm transition flex items-center gap-2 shadow">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path>
+          </svg>
+          Imprimir / Salvar PDF
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col lg:flex-row gap-6">
+
+    <!-- FORM INPUTS PANEL (NO PRINT) -->
+    <aside class="no-print lg:w-1/3 bg-white p-6 rounded-xl shadow-sm border border-slate-200 h-fit space-y-6">
+      <div>
+        <h2 class="text-lg font-bold text-slate-900 mb-1 flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-indigo-600"></span>
+          Dados do Estagiário
+        </h2>
+        <p class="text-xs text-slate-500 mb-4">Preencha para sincronizar automaticamente com as páginas do documento.</p>
+
+        <div class="space-y-3">
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 uppercase mb-1">Nome Completo</label>
+            <input type="text" id="in-estagiario-nome" value="Lucas Gabriel Silva" class="w-full text-sm border border-slate-300 rounded-md p-2 focus:ring-2 focus:ring-indigo-500 outline-none">
+          </div>
+
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block text-xs font-semibold text-slate-600 uppercase mb-1">CPF</label>
+              <input type="text" id="in-estagiario-cpf" value="123.456.789-00" class="w-full text-sm border border-slate-300 rounded-md p-2 focus:ring-2 focus:ring-indigo-500 outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-600 uppercase mb-1">RG</label>
+              <input type="text" id="in-estagiario-rg" value="12.345.678-9 SSP/SP" class="w-full text-sm border border-slate-300 rounded-md p-2 focus:ring-2 focus:ring-indigo-500 outline-none">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block text-xs font-semibold text-slate-600 uppercase mb-1">Curso</label>
+              <input type="text" id="in-estagiario-curso" value="Jogos Digitais" class="w-full text-sm border border-slate-300 rounded-md p-2 focus:ring-2 focus:ring-indigo-500 outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-600 uppercase mb-1">Matrícula</label>
+              <input type="text" id="in-estagiario-matricula" value="202410982" class="w-full text-sm border border-slate-300 rounded-md p-2 focus:ring-2 focus:ring-indigo-500 outline-none">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 uppercase mb-1">Endereço do Aluno</label>
+            <input type="text" id="in-estagiario-endereco" value="Rua das Flores, 123 - São Paulo/SP" class="w-full text-sm border border-slate-300 rounded-md p-2 focus:ring-2 focus:ring-indigo-500 outline-none">
+          </div>
+        </div>
+      </div>
+
+      <hr class="border-slate-200">
+
+      <div>
+        <h2 class="text-lg font-bold text-slate-900 mb-1 flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-indigo-600"></span>
+          Instituição de Ensino
+        </h2>
+        
+        <div class="space-y-3 mt-3">
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 uppercase mb-1">Nome da Instituição</label>
+            <input type="text" id="in-ies-nome" value="Faculdade de Tecnologia e Design" class="w-full text-sm border border-slate-300 rounded-md p-2 focus:ring-2 focus:ring-indigo-500 outline-none">
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block text-xs font-semibold text-slate-600 uppercase mb-1">CNPJ IES</label>
+              <input type="text" id="in-ies-cnpj" value="98.765.432/0001-10" class="w-full text-sm border border-slate-300 rounded-md p-2 focus:ring-2 focus:ring-indigo-500 outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-600 uppercase mb-1">Representante Legal</label>
+              <input type="text" id="in-ies-rep" value="Prof. Dr. Roberto Mendes" class="w-full text-sm border border-slate-300 rounded-md p-2 focus:ring-2 focus:ring-indigo-500 outline-none">
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 uppercase mb-1">Prof. Orientador (opcional)</label>
+            <input type="text" id="in-ies-orientador" value="Prof. Carlos Eduardo Souza" class="w-full text-sm border border-slate-300 rounded-md p-2 focus:ring-2 focus:ring-indigo-500 outline-none">
+          </div>
+        </div>
+      </div>
+
+      <hr class="border-slate-200">
+
+      <div>
+        <h2 class="text-lg font-bold text-slate-900 mb-1 flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-indigo-600"></span>
+          Vigência, Apólice & Assinatura
+        </h2>
+
+        <div class="space-y-3 mt-3">
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block text-xs font-semibold text-slate-600 uppercase mb-1">Data Início</label>
+              <input type="date" id="in-data-inicio" value="2026-03-01" class="w-full text-sm border border-slate-300 rounded-md p-2 focus:ring-2 focus:ring-indigo-500 outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-600 uppercase mb-1">Data Término</label>
+              <input type="date" id="in-data-fim" value="2026-08-31" class="w-full text-sm border border-slate-300 rounded-md p-2 focus:ring-2 focus:ring-indigo-500 outline-none">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block text-xs font-semibold text-slate-600 uppercase mb-1">Seguradora</label>
+              <input type="text" id="in-seguradora" value="Porto Seguro Companhia de Seguros" class="w-full text-sm border border-slate-300 rounded-md p-2 focus:ring-2 focus:ring-indigo-500 outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-600 uppercase mb-1">Nº Apólice</label>
+              <input type="text" id="in-apolice" value="AP-998234-01" class="w-full text-sm border border-slate-300 rounded-md p-2 focus:ring-2 focus:ring-indigo-500 outline-none">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block text-xs font-semibold text-slate-600 uppercase mb-1">Local Assinatura</label>
+              <input type="text" id="in-local-assinatura" value="Teresópolis - RJ" class="w-full text-sm border border-slate-300 rounded-md p-2 focus:ring-2 focus:ring-indigo-500 outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-600 uppercase mb-1">Data Assinatura</label>
+              <input type="date" id="in-data-assinatura" class="w-full text-sm border border-slate-300 rounded-md p-2 focus:ring-2 focus:ring-indigo-500 outline-none">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-amber-50 border border-amber-200 rounded-lg p-3 text-xs text-amber-900 leading-relaxed">
+        <p class="font-bold mb-1">📌 Observação de Conformidade Legal:</p>
+        <p>Este modelo está atualizado com as normas da <strong>Lei nº 11.788/2008</strong>. O estágio não remunerado exige a modalidade de <strong>Estágio Curricular Obrigatório</strong> vinculada ao plano de curso.</p>
+      </div>
+    </aside>
+
+    <!-- A4 PRINTABLE PAGES CONTAINER -->
+    <main class="lg:w-2/3 flex-1 flex flex-col items-center">
+
+      <!-- ==================== PÁGINA 1 DE 2 ==================== -->
+      <article class="a4-page page-break text-[12.5px] leading-relaxed">
+        <div>
+          <!-- CABEÇALHO DA PÁGINA 1 -->
+          <div class="text-center pb-2 mb-3 border-b-2 border-slate-900">
+            <h1 class="text-xl font-bold uppercase tracking-wide">Termo de Compromisso de Estágio</h1>
+            <p class="text-xs uppercase font-sans tracking-wider text-slate-600 mt-0.5">Estágio Curricular Obrigatório (Não Remunerado)</p>
+            <p class="text-[11px] italic text-slate-500 mt-0.5">Regido pela Lei nº 11.788, de 25 de setembro de 2008</p>
+          </div>
+
+          <!-- INTRODUÇÃO / PARTES -->
+          <p class="text-justify mb-3">
+            Pelo presente instrumento, as partes abaixo qualificadas celebram entre si o presente <strong>Termo de Compromisso de Estágio</strong>, mediante as cláusulas e condições a seguir estipuladas:
+          </p>
+
+          <!-- 1. CONCEDENTE -->
+          <div class="mb-3">
+            <h2 class="font-bold text-xs border-b border-slate-300 pb-0.5 mb-1.5 uppercase text-slate-900 font-sans">1. Empresa Concedente</h2>
+            <table class="w-full text-[12px] leading-snug">
+              <tr>
+                <td class="font-semibold w-36 py-0.5">Razão Social:</td>
+                <td class="py-0.5"><strong>HEDROS GAME STUDIO LTDA</strong></td>
+              </tr>
+              <tr>
+                <td class="font-semibold py-0.5">CNPJ:</td>
+                <td class="py-0.5">47.190.894/0001-93</td>
+              </tr>
+              <tr>
+                <td class="font-semibold py-0.5">Endereço:</td>
+                <td class="py-0.5">Rua Doutor Jorge Melick, 490, Casa 05 - Corta Vento, Teresópolis/RJ - CEP 25963-360</td>
+              </tr>
+              <tr>
+                <td class="font-semibold py-0.5">Representada por:</td>
+                <td class="py-0.5">Felipe Bruno Vieira Carreiro (Sócio-Administrador)</td>
+              </tr>
+              <tr>
+                <td class="font-semibold py-0.5">Supervisor de Estágio:</td>
+                <td class="py-0.5">Felipe Bruno Vieira Carreiro (Sócio-Administrador)</td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- 2. ESTAGIÁRIO -->
+          <div class="mb-3">
+            <h2 class="font-bold text-xs border-b border-slate-300 pb-0.5 mb-1.5 uppercase text-slate-900 font-sans">2. Estagiário(a)</h2>
+            <table class="w-full text-[12px] leading-snug">
+              <tr>
+                <td class="font-semibold w-36 py-0.5">Nome:</td>
+                <td class="py-0.5"><span id="doc-estagiario-nome" class="editable-highlight font-bold">Lucas Gabriel Silva</span></td>
+              </tr>
+              <tr>
+                <td class="font-semibold py-0.5">CPF:</td>
+                <td class="py-0.5"><span id="doc-estagiario-cpf" class="editable-highlight">123.456.789-00</span> &nbsp;|&nbsp; <strong>RG:</strong> <span id="doc-estagiario-rg" class="editable-highlight">12.345.678-9 SSP/SP</span></td>
+              </tr>
+              <tr>
+                <td class="font-semibold py-0.5">Curso:</td>
+                <td class="py-0.5"><span id="doc-estagiario-curso" class="editable-highlight">Jogos Digitais</span> &nbsp;|&nbsp; <strong>Matrícula:</strong> <span id="doc-estagiario-matricula" class="editable-highlight">202410982</span></td>
+              </tr>
+              <tr>
+                <td class="font-semibold py-0.5">Endereço:</td>
+                <td class="py-0.5"><span id="doc-estagiario-endereco" class="editable-highlight">Rua das Flores, 123 - São Paulo/SP</span></td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- 3. INSTITUIÇÃO DE ENSINO -->
+          <div class="mb-3">
+            <h2 class="font-bold text-xs border-b border-slate-300 pb-0.5 mb-1.5 uppercase text-slate-900 font-sans">3. Instituição de Ensino</h2>
+            <table class="w-full text-[12px] leading-snug">
+              <tr>
+                <td class="font-semibold w-36 py-0.5">Instituição:</td>
+                <td class="py-0.5"><span id="doc-ies-nome" class="editable-highlight font-bold">Faculdade de Tecnologia e Design</span></td>
+              </tr>
+              <tr>
+                <td class="font-semibold py-0.5">CNPJ:</td>
+                <td class="py-0.5"><span id="doc-ies-cnpj" class="editable-highlight">98.765.432/0001-10</span></td>
+              </tr>
+              <tr>
+                <td class="font-semibold py-0.5">Representante Legal:</td>
+                <td class="py-0.5"><span id="doc-ies-rep" class="editable-highlight">Prof. Dr. Roberto Mendes</span></td>
+              </tr>
+              <tr>
+                <td class="font-semibold py-0.5">Professor Orientador:</td>
+                <td class="py-0.5"><span id="doc-ies-orientador" class="editable-highlight">Prof. Carlos Eduardo Souza</span></td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- CLÁUSULAS PÁGINA 1 -->
+          <div class="space-y-2.5 text-justify text-[12px]">
+            <h2 class="font-bold text-xs border-b border-slate-300 pb-0.5 mb-1.5 uppercase text-slate-900 font-sans">4. Cláusulas e Condições</h2>
+
+            <p>
+              <strong>CLÁUSULA 1ª – DO OBJETO E CARÁTER OBRIGATÓRIO:</strong> O presente Termo de Compromisso tem por objeto formalizar a realização de <strong>Estágio Curricular Obrigatório</strong>, indispensável à integralização curricular e à obtenção do diploma do estudante. A realização do estágio não gera vínculo empregatício de qualquer natureza entre o Estagiário e a Concedente, nos termos da Lei nº 11.788/2008.
+            </p>
+
+            <p>
+              <strong>CLÁUSULA 2ª – DA JORNADA E HORÁRIO FLEXÍVEL:</strong> A jornada será de <strong>até 4 (quatro) horas diárias</strong> e <strong>até 20 (vinte) horas semanais</strong>, em horário flexível, definido de comum acordo entre as partes, observadas as atividades acadêmicas do Estagiário.
+            </p>
+
+            <p>
+              <strong>CLÁUSULA 3ª – DA VIGÊNCIA:</strong> O estágio terá início em <strong id="doc-data-inicio" class="editable-highlight">01/03/2026</strong> e término previsto para <strong id="doc-data-fim" class="editable-highlight">31/08/2026</strong>, podendo ser prorrogado ou rescindido nos termos deste instrumento.
+            </p>
+
+            <p>
+              <strong>CLÁUSULA 4ª – DA AUSÊNCIA DE REMUNERAÇÃO:</strong> Por se tratar de Estágio Curricular Obrigatório previsto na grade acadêmica, o estágio será realizado sem remuneração (sem concessão de bolsa-auxílio e auxílio-transporte), conforme o Art. 12 da Lei nº 11.788/2008.
+            </p>
+          </div>
+        </div>
+
+        <!-- FOOTER PÁGINA 1 -->
+        <div class="pt-2 border-t border-slate-300 flex justify-between text-[10px] text-slate-500 font-sans">
+          <span>Hedros Game Studio LTDA • Termo de Compromisso de Estágio</span>
+          <span>Página 1 de 2</span>
+        </div>
+      </article>
+
+
+      <!-- ==================== PÁGINA 2 DE 2 ==================== -->
+      <article class="a4-page text-[12.5px] leading-relaxed">
+        <div>
+          <!-- CABEÇALHO RESUMIDO PÁGINA 2 -->
+          <div class="text-center pb-2 mb-4 border-b border-slate-300">
+            <p class="text-[11px] font-bold uppercase tracking-wide text-slate-700">Termo de Compromisso de Estágio - Continuação</p>
+            <p class="text-[10px] text-slate-500 font-sans">Concedente: Hedros Game Studio LTDA | Estagiário: <span id="doc-header-estagiario">Lucas Gabriel Silva</span></p>
+          </div>
+
+          <!-- CONTINUAÇÃO DAS CLÁUSULAS -->
+          <div class="space-y-3 text-justify text-[12px]">
+            <p>
+              <strong>CLÁUSULA 5ª – DO SEGURO CONTRA ACIDENTES PESSOAIS:</strong> Em cumprimento ao Art. 9º, parágrafo único da Lei nº 11.788/2008, o Estagiário está coberto por Apólice de Seguro de Acidentes Pessoais nº <strong id="doc-apolice" class="editable-highlight">AP-998234-01</strong>, mantida pela seguradora <strong id="doc-seguradora" class="editable-highlight">Porto Seguro Companhia de Seguros</strong>.
+            </p>
+
+            <div>
+              <p>
+                <strong>CLÁUSULA 6ª – DAS ATIVIDADES:</strong> O Estagiário desenvolverá atividades relacionadas ao desenvolvimento de jogos digitais, incluindo, entre outras:
+              </p>
+              <ul class="list-disc pl-6 mt-1 space-y-0.5 text-[11.5px]">
+                <li>apoio na execução de testes de mecânicas e controle de qualidade (QA);</li>
+                <li>auxílio na documentação de Game Design;</li>
+                <li>organização de assets e conteúdos do projeto;</li>
+                <li>suporte à implementação de scripts, prototipagem e demais atividades compatíveis com sua formação, sempre sob supervisão;</li>
+                <li>participação em atividades compatíveis com seu curso e com o plano de estágio.</li>
+              </ul>
+            </div>
+
+            <p>
+              <strong>CLÁUSULA 7ª – DA CONFIDENCIALIDADE:</strong> O Estagiário obriga-se a cumprir com zelo a programação do estágio e manter confidencialidade sobre informações, códigos-fonte, documentos, artes, bancos de dados e demais informações confidenciais da Concedente, durante a vigência do estágio e após seu encerramento.
+            </p>
+
+            <p>
+              <strong>CLÁUSULA 8ª – DA RESCISÃO:</strong> O presente Termo poderá ser rescindido a qualquer tempo por qualquer das partes, mediante comunicação por escrito, sem que disso decorra qualquer indenização, observadas as disposições da Lei nº 11.788/2008.
+            </p>
+
+            <p>
+              <strong>CLÁUSULA 9ª – DO ACOMPANHAMENTO E RELATÓRIO:</strong> O estágio será acompanhado pelo Supervisor da Concedente e pelo Professor Orientador da Instituição de Ensino, sendo elaborados os relatórios de acompanhamento previstos na legislação e/ou exigidos pela Instituição de Ensino.
+            </p>
+          </div>
+
+          <!-- LOCAL E DATA -->
+          <div class="mt-10 text-right text-[12px]">
+            <p>
+              <span id="doc-local-assinatura" class="editable-highlight font-medium">Teresópolis - RJ</span>, <span id="doc-data-assinatura" class="editable-highlight font-medium">4 de agosto de 2026</span>.
+            </p>
+          </div>
+
+          <!-- ASSINATURAS -->
+          <div class="mt-16">
+            <p class="text-xs italic text-slate-500 mb-20 text-center font-sans">E, por estarem de pleno e comum acordo, as partes assinam o presente termo em 3 (três) vias de igual teor.</p>
+            
+            <div class="grid grid-cols-3 gap-6 text-center text-[11px] font-sans">
+              <div>
+                <div class="border-t border-slate-900 pt-2 font-bold uppercase text-slate-900">HEDROS GAME STUDIO LTDA</div>
+                <div class="text-[10px] text-slate-600 mt-0.5">Empresa Concedente</div>
+                <div class="text-[9px] text-slate-500 italic mt-0.5">Felipe Bruno V. Carreiro</div>
+              </div>
+
+              <div>
+                <div class="border-t border-slate-900 pt-2 font-bold uppercase text-slate-900" id="sig-estagiario">Lucas Gabriel Silva</div>
+                <div class="text-[10px] text-slate-600 mt-0.5">Estagiário(a)</div>
+              </div>
+
+              <div>
+                <div class="border-t border-slate-900 pt-2 font-bold uppercase text-slate-900" id="sig-ies">Faculdade de Tecnologia</div>
+                <div class="text-[10px] text-slate-600 mt-0.5">Instituição de Ensino</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FOOTER PÁGINA 2 -->
+        <div class="pt-2 border-t border-slate-300 flex justify-between text-[10px] text-slate-500 font-sans">
+          <span>Hedros Game Studio LTDA • Termo de Compromisso de Estágio</span>
+          <span>Página 2 de 2</span>
+        </div>
+      </article>
+
+    </main>
+
+  </div>
+
+  <!-- JAVASCRIPT FOR REACTIVE INPUT BINDING -->
+  <script>
+    function formatDateBr(dateString) {
+      if (!dateString) return '';
+      const parts = dateString.split('-');
+      if (parts.length === 3) {
+        return `${parts[2]}/${parts[1]}/${parts[0]}`;
+      }
+      return dateString;
+    }
+
+    function formatDateExtenso(dateString) {
+      if (!dateString) return '';
+      const parts = dateString.split('-');
+      if (parts.length === 3) {
+        const d = new Date(parts[0], parts[1] - 1, parts[2]);
+        return d.toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' });
+      }
+      return dateString;
+    }
+
+    function setElementText(id, value, fallback = '') {
+      const el = document.getElementById(id);
+      if (el) {
+        el.innerText = value || fallback;
+      }
+    }
+
+    function syncFields() {
+      // Estagiario
+      const nome = document.getElementById('in-estagiario-nome')?.value;
+      const cpf = document.getElementById('in-estagiario-cpf')?.value;
+      const rg = document.getElementById('in-estagiario-rg')?.value;
+      const curso = document.getElementById('in-estagiario-curso')?.value;
+      const mat = document.getElementById('in-estagiario-matricula')?.value;
+      const end = document.getElementById('in-estagiario-endereco')?.value;
+
+      setElementText('doc-estagiario-nome', nome, '__________________');
+      setElementText('doc-header-estagiario', nome, '__________________');
+      setElementText('sig-estagiario', nome, 'Estagiário');
+      setElementText('doc-estagiario-cpf', cpf, '___.___.___-__');
+      setElementText('doc-estagiario-rg', rg, '__________');
+      setElementText('doc-estagiario-curso', curso, '__________');
+      setElementText('doc-estagiario-matricula', mat, '__________');
+      setElementText('doc-estagiario-endereco', end, '__________________');
+
+      // IES
+      const iesNome = document.getElementById('in-ies-nome')?.value;
+      const iesCnpj = document.getElementById('in-ies-cnpj')?.value;
+      const iesRep = document.getElementById('in-ies-rep')?.value;
+      const iesOrientador = document.getElementById('in-ies-orientador')?.value;
+
+      setElementText('doc-ies-nome', iesNome, '__________________');
+      setElementText('sig-ies', iesNome, 'Instituição de Ensino');
+      setElementText('doc-ies-cnpj', iesCnpj, '___.___.___/____-__');
+      setElementText('doc-ies-rep', iesRep, '__________________');
+      setElementText('doc-ies-orientador', iesOrientador, '__________________');
+
+      // Datas e Apólice
+      const inicio = document.getElementById('in-data-inicio')?.value;
+      const fim = document.getElementById('in-data-fim')?.value;
+      const seguradora = document.getElementById('in-seguradora')?.value;
+      const apolice = document.getElementById('in-apolice')?.value;
+
+      setElementText('doc-data-inicio', formatDateBr(inicio), '__/__/____');
+      setElementText('doc-data-fim', formatDateBr(fim), '__/__/____');
+      setElementText('doc-seguradora', seguradora, '__________________');
+      setElementText('doc-apolice', apolice, '__________');
+
+      // Local e Data Assinatura
+      const localAssinatura = document.getElementById('in-local-assinatura')?.value;
+      const dataAssinatura = document.getElementById('in-data-assinatura')?.value;
+
+      setElementText('doc-local-assinatura', localAssinatura, '___________');
+      setElementText('doc-data-assinatura', formatDateExtenso(dataAssinatura), '___ de __________ de ____');
+    }
+
+    // Set default signature date input value to today if empty
+    const dateInput = document.getElementById('in-data-assinatura');
+    if (dateInput && !dateInput.value) {
+      const today = new Date();
+      const yyyy = today.getFullYear();
+      const mm = String(today.getMonth() + 1).padStart(2, '0');
+      const dd = String(today.getDate()).padStart(2, '0');
+      dateInput.value = `${yyyy}-${mm}-${dd}`;
+    }
+
+    // Attach listeners
+    const inputs = document.querySelectorAll('input');
+    inputs.forEach(input => {
+      input.addEventListener('input', syncFields);
+      input.addEventListener('change', syncFields);
+    });
+
+    // Initial sync
+    syncFields();
+  </script>
+</body>
+</html>
