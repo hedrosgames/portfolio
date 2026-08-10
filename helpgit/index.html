@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia Git + Unity Interativo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            unity: {
+              dark: '#121212',
+              card: '#1e1e1e',
+              border: '#2d2d2d',
+              accent: '#22c55e',
+              blue: '#38bdf8',
+              warning: '#f59e0b'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    code, pre {
+      font-family: 'Fira Code', monospace;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #121212;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #333;
+      border-radius: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #444;
+    }
+  </style>
+</head>
+<body class="bg-unity-dark text-gray-200 min-h-screen flex flex-col">
+
+  <header class="border-b border-unity-border bg-unity-card/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-wrap justify-between items-center gap-4">
+      <div class="flex items-center gap-3">
+        <div class="bg-black p-2.5 rounded-xl border border-unity-border">
+          <i class="fa-brands fa-unity text-2xl text-white"></i>
+        </div>
+        <div class="flex items-center gap-2 text-xl font-bold text-white">
+          <span>Git + Unity</span>
+          <span class="text-xs font-semibold px-2 py-0.5 rounded bg-unity-accent/20 text-unity-accent border border-unity-accent/30">Guia Prático</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-3 text-sm">
+        <a href="#step-1" class="hover:text-unity-accent transition-colors">Configuração</a>
+        <span class="text-gray-600">•</span>
+        <a href="#step-2" class="hover:text-unity-accent transition-colors">.gitignore</a>
+        <span class="text-gray-600">•</span>
+        <a href="#step-3" class="hover:text-unity-accent transition-colors">Comandos</a>
+        <span class="text-gray-600">•</span>
+        <a href="#step-6" class="hover:text-unity-accent transition-colors">Boas Práticas</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow max-w-6xl mx-auto px-4 py-8 w-full space-y-10">
+    
+    <!-- Hero Banner -->
+    <section class="bg-gradient-to-r from-emerald-950/40 via-unity-card to-slate-900 border border-unity-border rounded-2xl p-6 md:p-8 relative overflow-hidden">
+      <div class="max-w-3xl space-y-4 relative z-10">
+        <h1 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">
+          Como Conectar e Versionar seu Projeto Unity com Git
+        </h1>
+        <p class="text-gray-400 text-lg leading-relaxed">
+          Siga o passo a passo completo para integrar seu repositório vazio ao Unity, realizar commits, controlar branches e evitar erros clássicos que corrompem prefabs ou estouram limites do Git.
+        </p>
+        <div class="flex flex-wrap gap-4 pt-2">
+          <div class="flex items-center gap-2 text-xs bg-black/40 border border-unity-border px-3 py-1.5 rounded-lg text-gray-300">
+            <i class="fa-solid fa-check text-unity-accent"></i> Repositório Vazio Criado
+          </div>
+          <div class="flex items-center gap-2 text-xs bg-black/40 border border-unity-border px-3 py-1.5 rounded-lg text-gray-300">
+            <i class="fa-solid fa-check text-unity-accent"></i> Projeto Unity Aberto
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="step-1" class="bg-unity-card border border-unity-border rounded-2xl p-6 space-y-4">
+      <div class="flex items-center gap-3">
+        <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-unity-accent/10 border border-unity-accent/30 text-unity-accent font-bold">1</span>
+        <h2 class="text-xl font-bold text-white">Configurações Essenciais na Unity</h2>
+      </div>
+      <p class="text-gray-400 text-sm">
+        Antes de qualquer comando do Git, ajuste a Unity para que as cenas, scripts e prefabs sejam armazenados como texto legível para o Git detectar alterações de forma limpa.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-4 pt-2">
+        <div class="bg-black/50 border border-unity-border rounded-xl p-4 space-y-2">
+          <div class="flex items-center gap-2 text-unity-blue font-semibold text-sm">
+            <i class="fa-solid fa-gear"></i> Force Text (Asset Serialization)
+          </div>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Acesse <code class="bg-unity-border px-1.5 py-0.5 rounded text-pink-400">Edit &gt; Project Settings &gt; Editor</code>.<br>
+            Em <strong>Asset Serialization</strong>, selecione <strong>Mode: Force Text</strong>.
+          </p>
+        </div>
+
+        <div class="bg-black/50 border border-unity-border rounded-xl p-4 space-y-2">
+          <div class="flex items-center gap-2 text-unity-blue font-semibold text-sm">
+            <i class="fa-solid fa-eye"></i> Visible Meta Files (Version Control)
+          </div>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            No mesmo menu do Editor, certifique-se que o modo de <strong>Version Control</strong> está configurado como <strong>Visible Meta Files</strong>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="step-2" class="bg-unity-card border border-unity-border rounded-2xl p-6 space-y-4">
+      <div class="flex items-center gap-3">
+        <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-unity-accent/10 border border-unity-accent/30 text-unity-accent font-bold">2</span>
+        <h2 class="text-xl font-bold text-white">Crie o Arquivo .gitignore (Crucial)</h2>
+      </div>
+      <p class="text-gray-400 text-sm">
+        A Unity gera gigabytes de arquivos temporários e caches (como a pasta <code>Library</code>). Salve o conteúdo abaixo em um arquivo chamado <code class="text-emerald-400 font-semibold">.gitignore</code> na pasta raiz do seu projeto.
+      </p>
+
+      <div class="bg-black/80 border border-unity-border rounded-xl overflow-hidden">
+        <div class="flex justify-between items-center px-4 py-2 border-b border-unity-border bg-black/40">
+          <span class="text-xs font-mono text-gray-400">.gitignore (Pasta Raiz do Projeto)</span>
+          <button onclick="copyText('gitignore-code', this)" class="text-xs bg-unity-border hover:bg-gray-700 text-gray-200 px-3 py-1 rounded transition-colors flex items-center gap-1.5">
+            <i class="fa-regular fa-copy"></i> Copiar .gitignore
+          </button>
+        </div>
+        <pre id="gitignore-code" class="p-4 text-xs text-emerald-300 custom-scrollbar overflow-x-auto max-h-56 leading-relaxed"><code># Caches e arquivos gerados automaticamente pela Unity
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+
+# Visual Studio / Rider / VS Code
+.vs/
+.idea/
+/*.csproj
+/*.unityproj
+/*.sln
+/*.suo
+/*.user
+/*.userprefs
+/*.pidb
+/*.booproj
+/*.svd
+/*.pdb
+/*.opendb
+/*.VC.db
+
+# OS store files
+.DS_Store
+Thumbs.db</code></pre>
+      </div>
+
+      <div class="bg-unity-warning/10 border border-unity-warning/30 rounded-xl p-4 flex gap-3 text-xs text-amber-200">
+        <i class="fa-solid fa-triangle-exclamation text-unity-warning text-lg mt-0.5"></i>
+        <div>
+          <strong class="block text-unity-warning mb-0.5">Dica sobre arquivos pesados (Git LFS)</strong>
+          Para arquivos de textura 4K, modelos 3D pesados ou sons no formato .wav, considere usar o <code>git lfs</code> para evitar travar seu repositório.
+        </div>
+      </div>
+    </section>
+
+    <section id="step-3" class="bg-unity-card border border-unity-border rounded-2xl p-6 space-y-4">
+      <div class="flex items-center gap-3">
+        <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-unity-accent/10 border border-unity-accent/30 text-unity-accent font-bold">3</span>
+        <h2 class="text-xl font-bold text-white">Linkar o Repositório Local ao Remoto</h2>
+      </div>
+      <p class="text-gray-400 text-sm">
+        Abra o terminal (Git Bash, Prompt de Comando ou PowerShell) dentro da pasta onde fica o seu projeto da Unity:
+      </p>
+
+      <div class="space-y-3">
+        <div class="bg-black/80 border border-unity-border rounded-xl p-4 space-y-2">
+          <div class="flex justify-between items-center text-xs text-gray-400">
+            <span>Passo a Passo de Comandos</span>
+            <button onclick="copyText('commands-init', this)" class="text-xs bg-unity-border hover:bg-gray-700 text-gray-200 px-3 py-1 rounded transition-colors flex items-center gap-1.5">
+              <i class="fa-regular fa-copy"></i> Copiar Comandos
+            </button>
+          </div>
+          <pre id="commands-init" class="text-xs text-cyan-300 leading-relaxed overflow-x-auto"><code># 1. Inicializa o Git na pasta do projeto
+git init
+
+# 2. Configura a branch principal para 'main'
+git branch -M main
+
+# 3. Conecta seu projeto ao repositório vazio (Substitua pela sua URL)
+git remote add origin https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      
+      <!-- Commits, Push e Pull -->
+      <section class="bg-unity-card border border-unity-border rounded-2xl p-6 space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-unity-accent/10 border border-unity-accent/30 text-unity-accent font-bold">4</span>
+          <h2 class="text-lg font-bold text-white">Commits, Push e Pull</h2>
+        </div>
+        <p class="text-gray-400 text-xs">
+          O ciclo de trabalho básico para versionar alterações e enviar para o servidor.
+        </p>
+
+        <div class="bg-black/80 border border-unity-border rounded-xl p-3 space-y-2">
+          <div class="flex justify-between items-center text-xs text-gray-400">
+            <span>Primeiro Commit e Push</span>
+            <button onclick="copyText('cmd-commit', this)" class="text-xs bg-unity-border hover:bg-gray-700 text-gray-200 px-2.5 py-1 rounded transition-colors">
+              <i class="fa-regular fa-copy"></i> Copiar
+            </button>
+          </div>
+          <pre id="cmd-commit" class="text-xs text-cyan-300 leading-relaxed overflow-x-auto"><code># Adiciona os arquivos
+git add .
+
+# Grava as alterações com uma mensagem
+git commit -m "feat: configuracao inicial do projeto unity"
+
+# Envia para o servidor (1ª vez)
+git push -u origin main
+
+# Nos envios futuros:
+git push
+
+# Para baixar atualizações:
+git pull origin main</code></pre>
+        </div>
+      </section>
+
+      <!-- Branches e Merges -->
+      <section class="bg-unity-card border border-unity-border rounded-2xl p-6 space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-unity-accent/10 border border-unity-accent/30 text-unity-accent font-bold">5</span>
+          <h2 class="text-lg font-bold text-white">Branches e Merges</h2>
+        </div>
+        <p class="text-gray-400 text-xs">
+          Use branches para criar mecânicas novas sem correr o risco de quebrar o jogo principal.
+        </p>
+
+        <div class="bg-black/80 border border-unity-border rounded-xl p-3 space-y-2">
+          <div class="flex justify-between items-center text-xs text-gray-400">
+            <span>Fluxo de Branch</span>
+            <button onclick="copyText('cmd-branch', this)" class="text-xs bg-unity-border hover:bg-gray-700 text-gray-200 px-2.5 py-1 rounded transition-colors">
+              <i class="fa-regular fa-copy"></i> Copiar
+            </button>
+          </div>
+          <pre id="cmd-branch" class="text-xs text-cyan-300 leading-relaxed overflow-x-auto"><code># Cria e entra na nova branch
+git checkout -b feature/pulo-do-jogador
+
+# (Faça as alterações na Unity...)
+git add .
+git commit -m "feat: adicionado sistema de pulo"
+
+# Volte para a main e junte a alteração
+git checkout main
+git merge feature/pulo-do-jogador</code></pre>
+        </div>
+      </section>
+
+    </div>
+
+    <section id="step-6" class="bg-unity-card border border-unity-border rounded-2xl p-6 space-y-6">
+      <div class="flex items-center gap-3">
+        <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-unity-accent/10 border border-unity-accent/30 text-unity-accent font-bold">6</span>
+        <h2 class="text-xl font-bold text-white">Boas Práticas para Unity & Git</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        
+        <div class="bg-black/40 border border-unity-border p-4 rounded-xl space-y-2 hover:border-unity-warning/40 transition-colors">
+          <div class="flex items-center gap-2 text-unity-warning font-semibold text-sm">
+            <i class="fa-solid fa-cubes-stacked"></i> Cuidado com Cenas e Prefabs
+          </div>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Evite que duas pessoas editem a mesma cena (<code>.unity</code>) ou <code>.prefab</code> ao mesmo tempo. Resolver conflitos nesses arquivos é extremamente complexo. Prefira modularizar a fase com Prefabs e usar carregamento aditivo de cenas.
+          </p>
+        </div>
+
+        <div class="bg-black/40 border border-unity-border p-4 rounded-xl space-y-2 hover:border-unity-accent/40 transition-colors">
+          <div class="flex items-center gap-2 text-unity-accent font-semibold text-sm">
+            <i class="fa-solid fa-hard-drive"></i> Ative o Git LFS para Assets Pesados
+          </div>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Texturas 4K, modelos 3D (<code>.fbx</code>) e arquivos de áudio pesados (<code>.wav</code>) estouram os limites do Git. Configure o <strong>Git LFS</strong> para rastrear arquivos binários sem deixar o repositório lento.
+          </p>
+        </div>
+
+        <div class="bg-black/40 border border-unity-border p-4 rounded-xl space-y-2 hover:border-unity-blue/40 transition-colors">
+          <div class="flex items-center gap-2 text-unity-blue font-semibold text-sm">
+            <i class="fa-solid fa-file-code"></i> Preserve os Arquivos .meta
+          </div>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            O arquivo <code>.meta</code> guarda o GUID único de cada asset. Nunca delete ou mova arquivos no gerenciador do sistema operacional sem levar o <code>.meta</code> junto, senão as referências no Inspector sumirão.
+          </p>
+        </div>
+
+        <div class="bg-black/40 border border-unity-border p-4 rounded-xl space-y-2 hover:border-purple-500/40 transition-colors">
+          <div class="flex items-center gap-2 text-purple-400 font-semibold text-sm">
+            <i class="fa-solid fa-power-off"></i> Feche a Unity em Merges Grandes
+          </div>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Ao resolver conflitos manuais ou ao trocar de branch com muitas modificações, feche a Unity para evitar que ela re-importe assets incorretamente ou sobrescreva arquivos abertos.
+          </p>
+        </div>
+
+        <div class="bg-black/40 border border-unity-border p-4 rounded-xl space-y-2 hover:border-emerald-500/40 transition-colors">
+          <div class="flex items-center gap-2 text-emerald-400 font-semibold text-sm">
+            <i class="fa-solid fa-code-commit"></i> Commits Frequentes e Focados
+          </div>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Faça commit a cada pequena funcionalidade concluída. É muito mais fácil isolar e corrigir um bug quando as alterações estão divididas em commits pequenos e bem explicados.
+          </p>
+        </div>
+
+        <div class="bg-black/40 border border-unity-border p-4 rounded-xl space-y-2 hover:border-cyan-500/40 transition-colors">
+          <div class="flex items-center gap-2 text-cyan-400 font-semibold text-sm">
+            <i class="fa-solid fa-desktop"></i> Utilize Clientes Gráficos (GUI)
+          </div>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Ferramentas visuais como GitHub Desktop, Fork ou GitKraken facilitam a verificação de quais prefabs e meta files foram alterados antes de confirmá-los no commit.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-unity-border bg-black/60 py-6 text-center text-xs text-gray-500 mt-auto">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center flex-wrap gap-2">
+      <p>Guia interativo Git para Unity • Desenvolvido para auxílio no fluxo de trabalho</p>
+
+    </div>
+  </footer>
+
+  <script>
+    function copyText(elementId, btnElement) {
+      const el = document.getElementById(elementId);
+      if (!el) return;
+      
+      const text = el.innerText || el.textContent;
+      
+      // Copy to clipboard fallback
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.select();
+      
+      try {
+        document.execCommand('copy');
+        const originalHTML = btnElement.innerHTML;
+        btnElement.innerHTML = '<i class="fa-solid fa-check text-emerald-400"></i> Copiado!';
+        btnElement.classList.add('bg-emerald-950', 'text-emerald-300', 'border', 'border-emerald-500/40');
+        
+        setTimeout(() => {
+          btnElement.innerHTML = originalHTML;
+          btnElement.classList.remove('bg-emerald-950', 'text-emerald-300', 'border', 'border-emerald-500/40');
+        }, 2000);
+      } catch (err) {
+        console.error('Falha ao copiar texto: ', err);
+      } finally {
+        document.body.removeChild(textarea);
+      }
+    }
+  </script>
+</body>
+</html>
