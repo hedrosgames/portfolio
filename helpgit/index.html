@@ -83,7 +83,7 @@
           Como Conectar e Versionar seu Projeto Unity com Git
         </h1>
         <p class="text-gray-400 text-lg leading-relaxed">
-          Siga o passo a passo completo para integrar seu repositório vazio ao Unity, realizar commits, controlar branches e evitar erros clássicos que corrompem prefabs ou estouram limites do Git.
+          Um passo a passo para ligar seu repositório vazio ao Unity, fazer commits, controlar branches e fugir dos erros clássicos — aqueles que corrompem prefabs ou estouram o limite do Git.
         </p>
         <div class="flex flex-wrap gap-4 pt-2">
           <div class="flex items-center gap-2 text-xs bg-black/40 border border-unity-border px-3 py-1.5 rounded-lg text-gray-300">
@@ -99,10 +99,10 @@
     <section id="step-1" class="bg-unity-card border border-unity-border rounded-2xl p-6 space-y-4">
       <div class="flex items-center gap-3">
         <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-unity-accent/10 border border-unity-accent/30 text-unity-accent font-bold">1</span>
-        <h2 class="text-xl font-bold text-white">Configurações Essenciais na Unity</h2>
+        <h2 class="text-xl font-bold text-white">Ajustes Essenciais na Unity</h2>
       </div>
       <p class="text-gray-400 text-sm">
-        Antes de qualquer comando do Git, ajuste a Unity para que as cenas, scripts e prefabs sejam armazenados como texto legível para o Git detectar alterações de forma limpa.
+        Antes de qualquer comando, configure a Unity. Com o asset serialization em texto, o Git enxerga cada alteração em cenas, scripts e prefabs com clareza.
       </p>
 
       <div class="grid md:grid-cols-2 gap-4 pt-2">
@@ -121,7 +121,7 @@
             <i class="fa-solid fa-eye"></i> Visible Meta Files (Version Control)
           </div>
           <p class="text-xs text-gray-400 leading-relaxed">
-            No mesmo menu do Editor, certifique-se que o modo de <strong>Version Control</strong> está configurado como <strong>Visible Meta Files</strong>.
+            No mesmo menu, confirme que o <strong>Version Control</strong> está em <strong>Visible Meta Files</strong>.
           </p>
         </div>
       </div>
@@ -130,10 +130,10 @@
     <section id="step-2" class="bg-unity-card border border-unity-border rounded-2xl p-6 space-y-4">
       <div class="flex items-center gap-3">
         <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-unity-accent/10 border border-unity-accent/30 text-unity-accent font-bold">2</span>
-        <h2 class="text-xl font-bold text-white">Crie o Arquivo .gitignore (Crucial)</h2>
+        <h2 class="text-xl font-bold text-white">Crie o Arquivo .gitignore (Não Pule)</h2>
       </div>
       <p class="text-gray-400 text-sm">
-        A Unity gera gigabytes de arquivos temporários e caches (como a pasta <code>Library</code>). Salve o conteúdo abaixo em um arquivo chamado <code class="text-emerald-400 font-semibold">.gitignore</code> na pasta raiz do seu projeto.
+        A Unity gera gigabytes de arquivos temporários e caches, tipo a pasta <code>Library</code>. Salve o conteúdo abaixo num arquivo chamado <code class="text-emerald-400 font-semibold">.gitignore</code> na raiz do seu projeto.
       </p>
 
       <div class="bg-black/80 border border-unity-border rounded-xl overflow-hidden">
@@ -177,8 +177,8 @@ Thumbs.db</code></pre>
       <div class="bg-unity-warning/10 border border-unity-warning/30 rounded-xl p-4 flex gap-3 text-xs text-amber-200">
         <i class="fa-solid fa-triangle-exclamation text-unity-warning text-lg mt-0.5"></i>
         <div>
-          <strong class="block text-unity-warning mb-0.5">Dica sobre arquivos pesados (Git LFS)</strong>
-          Para arquivos de textura 4K, modelos 3D pesados ou sons no formato .wav, considere usar o <code>git lfs</code> para evitar travar seu repositório.
+          <strong class="block text-unity-warning mb-0.5">Dica: arquivos pesados pedem Git LFS</strong>
+          Textura 4K, modelo 3D pesado ou som .wav? Vale ativar o <code>git lfs</code> — sem ele, seu repositório engorda e trava.
         </div>
       </div>
     </section>
@@ -186,10 +186,10 @@ Thumbs.db</code></pre>
     <section id="step-3" class="bg-unity-card border border-unity-border rounded-2xl p-6 space-y-4">
       <div class="flex items-center gap-3">
         <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-unity-accent/10 border border-unity-accent/30 text-unity-accent font-bold">3</span>
-        <h2 class="text-xl font-bold text-white">Linkar o Repositório Local ao Remoto</h2>
+        <h2 class="text-xl font-bold text-white">Ligue o Repositório Local ao Remoto</h2>
       </div>
       <p class="text-gray-400 text-sm">
-        Abra o terminal (Git Bash, Prompt de Comando ou PowerShell) dentro da pasta onde fica o seu projeto da Unity:
+        Abra o terminal (Git Bash, Prompt de Comando ou PowerShell) na pasta do seu projeto Unity:
       </p>
 
       <div class="space-y-3">
@@ -221,7 +221,7 @@ git remote add origin https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git</code><
           <h2 class="text-lg font-bold text-white">Commits, Push e Pull</h2>
         </div>
         <p class="text-gray-400 text-xs">
-          O ciclo de trabalho básico para versionar alterações e enviar para o servidor.
+          O ciclo básico: você grava a mudança e manda para o servidor. Depois, puxa as novidades dos outros.
         </p>
 
         <div class="bg-black/80 border border-unity-border rounded-xl p-3 space-y-2">
@@ -255,7 +255,7 @@ git pull origin main</code></pre>
           <h2 class="text-lg font-bold text-white">Branches e Merges</h2>
         </div>
         <p class="text-gray-400 text-xs">
-          Use branches para criar mecânicas novas sem correr o risco de quebrar o jogo principal.
+          Crie mecânicas novas numa branch sem arriscar quebrar o jogo principal.
         </p>
 
         <div class="bg-black/80 border border-unity-border rounded-xl p-3 space-y-2">
@@ -293,7 +293,7 @@ git merge feature/pulo-do-jogador</code></pre>
             <i class="fa-solid fa-cubes-stacked"></i> Cuidado com Cenas e Prefabs
           </div>
           <p class="text-xs text-gray-400 leading-relaxed">
-            Evite que duas pessoas editem a mesma cena (<code>.unity</code>) ou <code>.prefab</code> ao mesmo tempo. Resolver conflitos nesses arquivos é extremamente complexo. Prefira modularizar a fase com Prefabs e usar carregamento aditivo de cenas.
+            Duas pessoas editando a mesma cena (<code>.unity</code>) ou <code>.prefab</code> ao mesmo tempo? Resolver conflito nesses arquivos é um inferno. Prefira fases montadas com Prefabs e carregamento aditivo de cenas.
           </p>
         </div>
 
@@ -302,7 +302,7 @@ git merge feature/pulo-do-jogador</code></pre>
             <i class="fa-solid fa-hard-drive"></i> Ative o Git LFS para Assets Pesados
           </div>
           <p class="text-xs text-gray-400 leading-relaxed">
-            Texturas 4K, modelos 3D (<code>.fbx</code>) e arquivos de áudio pesados (<code>.wav</code>) estouram os limites do Git. Configure o <strong>Git LFS</strong> para rastrear arquivos binários sem deixar o repositório lento.
+            Texturas 4K, modelos 3D (<code>.fbx</code>) e áudios pesados (<code>.wav</code>) estouram o limite do Git. Com o <strong>Git LFS</strong>, esses binários ficam de fora e o repositório continua rápido.
           </p>
         </div>
 
@@ -311,7 +311,7 @@ git merge feature/pulo-do-jogador</code></pre>
             <i class="fa-solid fa-file-code"></i> Preserve os Arquivos .meta
           </div>
           <p class="text-xs text-gray-400 leading-relaxed">
-            O arquivo <code>.meta</code> guarda o GUID único de cada asset. Nunca delete ou mova arquivos no gerenciador do sistema operacional sem levar o <code>.meta</code> junto, senão as referências no Inspector sumirão.
+            O arquivo <code>.meta</code> guarda o GUID único de cada asset. Moveu ou apagou arquivo pelo explorador do sistema sem levar o <code>.meta</code> junto? As referências no Inspector somem.
           </p>
         </div>
 
@@ -320,7 +320,7 @@ git merge feature/pulo-do-jogador</code></pre>
             <i class="fa-solid fa-power-off"></i> Feche a Unity em Merges Grandes
           </div>
           <p class="text-xs text-gray-400 leading-relaxed">
-            Ao resolver conflitos manuais ou ao trocar de branch com muitas modificações, feche a Unity para evitar que ela re-importe assets incorretamente ou sobrescreva arquivos abertos.
+            Resolver conflito na mão ou trocar de branch com muita coisa mudada? Feche a Unity antes. Ela pode re-importar assets errado ou sobrescrever arquivos abertos.
           </p>
         </div>
 
@@ -329,7 +329,7 @@ git merge feature/pulo-do-jogador</code></pre>
             <i class="fa-solid fa-code-commit"></i> Commits Frequentes e Focados
           </div>
           <p class="text-xs text-gray-400 leading-relaxed">
-            Faça commit a cada pequena funcionalidade concluída. É muito mais fácil isolar e corrigir um bug quando as alterações estão divididas em commits pequenos e bem explicados.
+            Commite a cada funcionalidade pequena que terminar. É muito mais fácil achar e corrigir um bug quando cada mudança vive num commit pequeno e bem explicado.
           </p>
         </div>
 
@@ -338,7 +338,7 @@ git merge feature/pulo-do-jogador</code></pre>
             <i class="fa-solid fa-desktop"></i> Utilize Clientes Gráficos (GUI)
           </div>
           <p class="text-xs text-gray-400 leading-relaxed">
-            Ferramentas visuais como GitHub Desktop, Fork ou GitKraken facilitam a verificação de quais prefabs e meta files foram alterados antes de confirmá-los no commit.
+            Clientes visuais como GitHub Desktop, Fork ou GitKraken mostram direto na tela quais prefabs e meta files mudaram antes de você fechar o commit.
           </p>
         </div>
 
@@ -349,7 +349,7 @@ git merge feature/pulo-do-jogador</code></pre>
 
   <footer class="border-t border-unity-border bg-black/60 py-6 text-center text-xs text-gray-500 mt-auto">
     <div class="max-w-6xl mx-auto px-4 flex justify-between items-center flex-wrap gap-2">
-      <p>Guia interativo Git para Unity • Desenvolvido para auxílio no fluxo de trabalho</p>
+      <p>Guia Git para Unity • Feito pra te salvar na hora do merge</p>
 
     </div>
   </footer>
